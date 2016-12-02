@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -950391427, guid: f78969414d99d1645b571394c89a026a, type: 3}
+  m_Name: TiledLoaderSettings
+  m_EditorClassIdentifier: 
+  IDProperty: Name
+  RotationProperty: Rotation
+  ThirdAxisProperty: Height
+  VisibleProperty: Visible
+  TiledLoaderPath: TiledLoader
+  DefaultScalingFactor: 1
+  ParentTilesToLayers: 1
+  ParentLayersToTiledLoader: 0
+  MapTiledYToUnityZ: 1
+  IgnoreLayerVisible: 0
+  DockWindows: 1
+  WarnUnmatchedTiles: 1
+  ScaleXProperty: ScaleX
+  ScaleYProperty: ScaleY
+  ScaleZProperty: ScaleZ
+  CombineProperty: Combine
+  StaticProperty: Static
+  LayerProperty: Layer
+  DefaultImportStatic: 0
+  CombineMaterial: {fileID: 0}
+  LayerPrefab: {fileID: 0}
+  InstanceComponent: {fileID: 0}
+  LayerComponent: {fileID: 0}
