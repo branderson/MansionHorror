@@ -1,7 +1,7 @@
 # Gamebuilders Game Jam Fall 2016
 Welcome to the first Gamebuilders Game Jam of the year, and the last game-making event of the semester! I'm Brad and I'll be working as the Project Lead for this game. If you need anything, let me know and I'll try to help. I hope you're all excited to work on this game, cause you'll be working on it for the next 24 hours. 
 
-<b>Please read through this entire document before you start working, it'll help make sure we're all on the same page and don't step on each other's toes too much.</b>
+<b>Please read through this entire document before you start working, it'll help make sure we're all on the same page and don't step on each other's toes too much. If you don't, when you run into an issue I'm gonna ask you to read through this page to see if it explains your problem before I come help you.</b>
 
 
 ## Design
@@ -116,3 +116,21 @@ If while working on a feature something comes up that you need to address quickl
 6. Push from develop to origin/develop.
 
 ### Unity
+#### Standard Assets
+Please don't import any Unity Standard Assets. They tend to pull way too many random assets into the project which will not be used. If you absolutely must use something from the Standard Assets, let me know and I'll make sure we only pull in exactly what we need, rather than 50MB of random images and a separate input manager.
+
+#### Prefabs
+Use prefabs for everything. Every object in the game should be an instance of a prefab, even if there's only one of that object in the entire game. It's much easier to change objects when there's a prefab stored on the disk somewhere that can be edited from any scene to change all instances of it at once. Prefabs should be given descriptive names and no two prefabs should have the same name. Use a folder hierarchy to organize prefabs.
+
+#### Code
+Use hierarchial namespaces to enclose all classes for each major feature. Namespaces should be named after the folder hierarchy to the script, ignoring the Scripts folder. If a script is at Assets/Scripts/AI/Bosses/, its namespace should be "Assets.AI.Bosses".
+
+Try to follow a consistent coding style. Make all of your classes' fields (class variables) private unless they absolutely need to be public, and prefix them with the \[SerializeField\] attribute if they need to be edited in the Inspector. Name private fields using \_camelCase (starting with a \_) and public fields using PascalCase. Similarly, make all methods (class functions) that are only used by the class private. All methods should be named using PascalCase. Variables local to functions should use camelCase without the \_. Following this will help minimize your class's public API to what should actually be public, and the naming scheme will help everyone keep track of which variables are public, private, or local.
+
+Make use of classes in the Assets.Utility namespace, particularly CustomMonoBehaviour. Every component you instantiate should inherit from CustomMonoBehaviour. It provides a bunch of really helpful methods for calculating distances and directions between objects, as well as caching references to components. Normally, components on objects are accessed by calling GetComponent<TypeOfComponent>(). This is a slow call, so you want to avoid calling this in an Update loop. Usually you'd want to call this for every component your class needs access to in Awake and store the references to the components in private fields in the class. This is still the best thing to do, but CustomMonoBehaviour has versions GetComponent that automatically cache the components for you, which is convenient. Assets.Utility.Static also has some really useful functions for manipulating transforms.
+
+Above all, don't worry if your code isn't perfect. This is a game jam and it's much more important that we get features working than that our code is nice and clean. Try to make your code readable and try to follow these suggestions as well as you can, but you don't have to treat them as rules.
+
+
+## Finally...
+If you got this far and actually read all of that, thanks for reading! Now go ahead and get started, and have fun. Hopefully by the end of this we'll have something made that we can all be proud of!
