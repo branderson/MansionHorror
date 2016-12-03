@@ -207,6 +207,24 @@ GameObject:
   m_PrefabParentObject: {fileID: 1060821614521956, guid: 451483034c53c224ea72b8b8f4f184fb,
     type: 2}
   m_PrefabInternal: {fileID: 414969851}
+--- !u!114 &1555368013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1555368012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a253224f353b504a9fd3a517f95da67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _patrolPoints:
+  - {x: 0, y: 0}
+  - {x: 3, y: 0}
+  - {x: 2, y: 2}
+  _sanityDamage: 0.2
+  _attackRange: 2
+  _patrolSpeed: 2
 --- !u!1001 &2139298028
 Prefab:
   m_ObjectHideFlags: 0
