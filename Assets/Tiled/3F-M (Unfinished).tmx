@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="100" tilewidth="128" tileheight="128" nextobjectid="86">
+ <tileset firstgid="1" name="Tileset1" tilewidth="128" tileheight="128" tilecount="400" columns="20">
+  <image source="../Downloads/Tileset(3).png" width="2560" height="2560"/>
+  <tile id="0">
+   <properties>
+    <property name="Name" value="HallInNW"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Name" value="HallN"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="Name" value="HallInNE"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="Name" value="Bed1InNW"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="Name" value="Bed1N"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="Name" value="Bed1InNE"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="Name" value="HallDoorW"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="Name" value="HallDoorN"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="Name" value="HallDoorE"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="Name" value="HallDoorS"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="Name" value="HallW"/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="Name" value="HallFloor"/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="Name" value="HallE"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="Name" value="Bed1W"/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="Name" value="Bed1Floor"/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="Name" value="Bed1E"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="Name" value="Bed1DoorW"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="Name" value="Bed1DoorN"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="Name" value="Bed1DoorE"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="Name" value="Bed1DoorS"/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="Name" value="HallInSW"/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="Name" value="HallS"/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="Name" value="HallInSE"/>
+   </properties>
+  </tile>
+  <tile id="43">
+   <properties>
+    <property name="Name" value="Bed1InSW"/>
+   </properties>
+  </tile>
+  <tile id="44">
+   <properties>
+    <property name="Name" value="Bed1S"/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="Name" value="Bed1InSE"/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="Name" value="Bed2DoorW"/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="Name" value="Bed2DoorN"/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="Name" value="Bed2DoorE"/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="Name" value="Bed2DoorS"/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="Name" value="RecInNW"/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="Name" value="RecN"/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="Name" value="RecInNE"/>
+   </properties>
+  </tile>
+  <tile id="63">
+   <properties>
+    <property name="Name" value="Bed2InNW"/>
+   </properties>
+  </tile>
+  <tile id="64">
+   <properties>
+    <property name="Name" value="Bed2N"/>
+   </properties>
+  </tile>
+  <tile id="65">
+   <properties>
+    <property name="Name" value="Bed2InNE"/>
+   </properties>
+  </tile>
+  <tile id="66">
+   <properties>
+    <property name="Name" value="RecDoorW"/>
+   </properties>
+  </tile>
+  <tile id="67">
+   <properties>
+    <property name="Name" value="RecDoorN"/>
+   </properties>
+  </tile>
+  <tile id="68">
+   <properties>
+    <property name="Name" value="RecDoorE"/>
+   </properties>
+  </tile>
+  <tile id="69">
+   <properties>
+    <property name="Name" value="RecDoorS"/>
+   </properties>
+  </tile>
+  <tile id="80">
+   <properties>
+    <property name="Name" value="RecW"/>
+   </properties>
+  </tile>
+  <tile id="81">
+   <properties>
+    <property name="Name" value="RecFloor"/>
+   </properties>
+  </tile>
+  <tile id="82">
+   <properties>
+    <property name="Name" value="RecE"/>
+   </properties>
+  </tile>
+  <tile id="83">
+   <properties>
+    <property name="Name" value="Bed2W"/>
+   </properties>
+  </tile>
+  <tile id="84">
+   <properties>
+    <property name="Name" value="Bed2Floor"/>
+   </properties>
+  </tile>
+  <tile id="85">
+   <properties>
+    <property name="Name" value="Bed2E"/>
+   </properties>
+  </tile>
+  <tile id="86">
+   <properties>
+    <property name="Name" value="KitchenDoorW"/>
+   </properties>
+  </tile>
+  <tile id="87">
+   <properties>
+    <property name="Name" value="KitchenDoorN"/>
+   </properties>
+  </tile>
+  <tile id="88">
+   <properties>
+    <property name="Name" value="KitchenDoorE"/>
+   </properties>
+  </tile>
+  <tile id="89">
+   <properties>
+    <property name="Name" value="KitchenDoorS"/>
+   </properties>
+  </tile>
+  <tile id="100">
+   <properties>
+    <property name="Name" value="RecInSW"/>
+   </properties>
+  </tile>
+  <tile id="101">
+   <properties>
+    <property name="Name" value="RecS"/>
+   </properties>
+  </tile>
+  <tile id="102">
+   <properties>
+    <property name="Name" value="RecInSE"/>
+   </properties>
+  </tile>
+  <tile id="103">
+   <properties>
+    <property name="Name" value="Bed2InSW"/>
+   </properties>
+  </tile>
+  <tile id="104">
+   <properties>
+    <property name="Name" value="Bed2S"/>
+   </properties>
+  </tile>
+  <tile id="105">
+   <properties>
+    <property name="Name" value="Bed2InSE"/>
+   </properties>
+  </tile>
+  <tile id="106">
+   <properties>
+    <property name="Name" value="StorageDoorW"/>
+   </properties>
+  </tile>
+  <tile id="107">
+   <properties>
+    <property name="Name" value="StorageDoorN"/>
+   </properties>
+  </tile>
+  <tile id="108">
+   <properties>
+    <property name="Name" value="StorageDoorE"/>
+   </properties>
+  </tile>
+  <tile id="109">
+   <properties>
+    <property name="Name" value="StorageDoorS"/>
+   </properties>
+  </tile>
+  <tile id="120">
+   <properties>
+    <property name="Name" value="KitchenInNW"/>
+   </properties>
+  </tile>
+  <tile id="121">
+   <properties>
+    <property name="Name" value="KitchenN"/>
+   </properties>
+  </tile>
+  <tile id="122">
+   <properties>
+    <property name="Name" value="KitchenInNE"/>
+   </properties>
+  </tile>
+  <tile id="123">
+   <properties>
+    <property name="Name" value="StorageInNW"/>
+   </properties>
+  </tile>
+  <tile id="124">
+   <properties>
+    <property name="Name" value="StorageN"/>
+   </properties>
+  </tile>
+  <tile id="125">
+   <properties>
+    <property name="Name" value="StorageInNE"/>
+   </properties>
+  </tile>
+  <tile id="126">
+   <properties>
+    <property name="Name" value="HallOutSE"/>
+   </properties>
+  </tile>
+  <tile id="127">
+   <properties>
+    <property name="Name" value="HallOutSW"/>
+   </properties>
+  </tile>
+  <tile id="128">
+   <properties>
+    <property name="Name" value="Bed1OutSE"/>
+   </properties>
+  </tile>
+  <tile id="129">
+   <properties>
+    <property name="Name" value="Bed1OutSW"/>
+   </properties>
+  </tile>
+  <tile id="140">
+   <properties>
+    <property name="Name" value="KitchenW"/>
+   </properties>
+  </tile>
+  <tile id="141">
+   <properties>
+    <property name="Name" value="KitchenFloor"/>
+   </properties>
+  </tile>
+  <tile id="142">
+   <properties>
+    <property name="Name" value="KitchenE"/>
+   </properties>
+  </tile>
+  <tile id="143">
+   <properties>
+    <property name="Name" value="StorageW"/>
+   </properties>
+  </tile>
+  <tile id="144">
+   <properties>
+    <property name="Name" value="StorageFloor"/>
+   </properties>
+  </tile>
+  <tile id="145">
+   <properties>
+    <property name="Name" value="StorageE"/>
+   </properties>
+  </tile>
+  <tile id="146">
+   <properties>
+    <property name="Name" value="HallOutNE"/>
+   </properties>
+  </tile>
+  <tile id="147">
+   <properties>
+    <property name="Name" value="HallOutNW"/>
+   </properties>
+  </tile>
+  <tile id="148">
+   <properties>
+    <property name="Name" value="Bed1OutNE"/>
+   </properties>
+  </tile>
+  <tile id="149">
+   <properties>
+    <property name="Name" value="Bed1OutNW"/>
+   </properties>
+  </tile>
+  <tile id="160">
+   <properties>
+    <property name="Name" value="KitchenInSW"/>
+   </properties>
+  </tile>
+  <tile id="161">
+   <properties>
+    <property name="Name" value="KitchenS"/>
+   </properties>
+  </tile>
+  <tile id="162">
+   <properties>
+    <property name="Name" value="KitchenInSE"/>
+   </properties>
+  </tile>
+  <tile id="163">
+   <properties>
+    <property name="Name" value="StorageInSW"/>
+   </properties>
+  </tile>
+  <tile id="164">
+   <properties>
+    <property name="Name" value="StorageS"/>
+   </properties>
+  </tile>
+  <tile id="165">
+   <properties>
+    <property name="Name" value="StorageInSE"/>
+   </properties>
+  </tile>
+  <tile id="166">
+   <properties>
+    <property name="Name" value="RecOutSE"/>
+   </properties>
+  </tile>
+  <tile id="167">
+   <properties>
+    <property name="Name" value="RecOutSW"/>
+   </properties>
+  </tile>
+  <tile id="168">
+   <properties>
+    <property name="Name" value="Bed2OutSE"/>
+   </properties>
+  </tile>
+  <tile id="169">
+   <properties>
+    <property name="Name" value="Bed2OutSW"/>
+   </properties>
+  </tile>
+  <tile id="180">
+   <properties>
+    <property name="Name" value=""/>
+   </properties>
+  </tile>
+  <tile id="181">
+   <properties>
+    <property name="Name" value=""/>
+   </properties>
+  </tile>
+  <tile id="183">
+   <properties>
+    <property name="Name" value=""/>
+   </properties>
+  </tile>
+  <tile id="184">
+   <properties>
+    <property name="Name" value=""/>
+   </properties>
+  </tile>
+  <tile id="185">
+   <properties>
+    <property name="Name" value=""/>
+   </properties>
+  </tile>
+  <tile id="186">
+   <properties>
+    <property name="Name" value="RecOutNE"/>
+   </properties>
+  </tile>
+  <tile id="187">
+   <properties>
+    <property name="Name" value="RecOutNW"/>
+   </properties>
+  </tile>
+  <tile id="188">
+   <properties>
+    <property name="Name" value="Bed2OutNE"/>
+   </properties>
+  </tile>
+  <tile id="189">
+   <properties>
+    <property name="Name" value="Bed2OutNW"/>
+   </properties>
+  </tile>
+  <tile id="206">
+   <properties>
+    <property name="Name" value="KitchenOutSE"/>
+   </properties>
+  </tile>
+  <tile id="207">
+   <properties>
+    <property name="Name" value="KitchenOutSW"/>
+   </properties>
+  </tile>
+  <tile id="208">
+   <properties>
+    <property name="Name" value="StorageOutSE"/>
+   </properties>
+  </tile>
+  <tile id="209">
+   <properties>
+    <property name="Name" value="StorageOutSW"/>
+   </properties>
+  </tile>
+  <tile id="226">
+   <properties>
+    <property name="Name" value="KitchenOutNE"/>
+   </properties>
+  </tile>
+  <tile id="227">
+   <properties>
+    <property name="Name" value="KitchenOutNW"/>
+   </properties>
+  </tile>
+  <tile id="228">
+   <properties>
+    <property name="Name" value="StorageOutNE"/>
+   </properties>
+  </tile>
+  <tile id="229">
+   <properties>
+    <property name="Name" value="StorageOutNW"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="401" name="Obj_Tileset" tilewidth="128" tileheight="128" tilecount="400" columns="20">
+  <image source="../Downloads/Object_Tileset.png" width="2560" height="2560"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="200" height="100">
+  <data encoding="base64" compression="zlib">
+   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
+  </data>
+ </layer>
+ <objectgroup name="RoomBoundaries">
+  <object id="4" x="8448" y="7808"/>
+  <object id="5" x="15556" y="2508" width="2288" height="2284">
+   <properties>
+    <property name="Room" type="int" value="19"/>
+   </properties>
+  </object>
+  <object id="6" x="17812" y="2504" width="1440" height="1388">
+   <properties>
+    <property name="Room" type="int" value="19"/>
+   </properties>
+  </object>
+  <object id="9" x="3064" y="1224" width="280" height="740">
+   <properties>
+    <property name="Room" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="10" x="3880" y="2000" height="4"/>
+  <object id="11" x="3036" y="1204" width="2548" height="292">
+   <properties>
+    <property name="Room" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="14" x="5064" y="716" width="540" height="3088">
+   <properties>
+    <property name="Room" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="15" x="5048" y="708" width="3524" height="400">
+   <properties>
+    <property name="Room" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="16" x="8056" y="724" width="512" height="1332">
+   <properties>
+    <property name="Room" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="17" x="2332" y="3228" width="2752" height="584">
+   <properties>
+    <property name="Room" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="18" x="2316" y="3796" width="616" height="3876">
+   <properties>
+    <property name="Room" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="20" x="2920" y="6288" width="1916" height="368">
+   <properties>
+    <property name="Room" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="23" x="5608" y="1128" width="920" height="3744">
+   <properties>
+    <property name="Room" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="24" x="6532" y="1308" width="356" height="3556">
+   <properties>
+    <property name="Room" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="25" x="6880" y="3080" width="1944" height="1788">
+   <properties>
+    <property name="Room" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="26" x="7328" y="4840" width="1484" height="1404">
+   <properties>
+    <property name="Room" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="27" x="4240" y="3844" width="1380" height="2436">
+   <properties>
+    <property name="Room" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="28" x="5524" y="4768" width="736" height="1496">
+   <properties>
+    <property name="Room" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="29" x="3720" y="4352" width="788" height="1932">
+   <properties>
+    <property name="Room" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="30" x="3724" y="3852" width="500" height="496">
+   <properties>
+    <property name="Room" type="int" value="21"/>
+   </properties>
+  </object>
+  <object id="31" x="7308" y="6300" width="2420" height="352">
+   <properties>
+    <property name="Room" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="32" x="9356" y="5652" width="348" height="684">
+   <properties>
+    <property name="Room" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="33" x="9680" y="5664" width="2104" height="316">
+   <properties>
+    <property name="Room" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="34" x="9740" y="6288" width="498" height="362">
+   <properties>
+    <property name="Room" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="36" x="9860" y="6636" width="372" height="140">
+   <properties>
+    <property name="Room" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="38" x="11792" y="5268" width="464" height="1368">
+   <properties>
+    <property name="Room" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="43" x="12240" y="5276" width="1284" height="444">
+   <properties>
+    <property name="Room" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="45" x="13224" y="5040" width="1208" height="432">
+   <properties>
+    <property name="Room" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="46" x="13980" y="5372" width="448" height="2904">
+   <properties>
+    <property name="Room" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="49" x="13856" y="6832" width="328" height="1448">
+   <properties>
+    <property name="Room" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="51" x="13224" y="6816" width="808" height="328">
+   <properties>
+    <property name="Room" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="52" x="13216" y="5628" width="328" height="1284">
+   <properties>
+    <property name="Room" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="53" x="10900" y="6164" width="904" height="464">
+   <properties>
+    <property name="Room" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="54" x="10904" y="6568" width="456" height="1852">
+   <properties>
+    <property name="Room" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="55" x="12328" y="5804" width="816" height="2076">
+   <properties>
+    <property name="Room" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="57" x="12968" y="7200" width="808" height="2112">
+   <properties>
+    <property name="Room" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="59" x="11820" y="8108" width="1140" height="1180">
+   <properties>
+    <property name="Room" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="60" x="11444" y="6708" width="660" height="2080">
+   <properties>
+    <property name="Room" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="61" x="12088" y="6688" width="236" height="1200">
+   <properties>
+    <property name="Room" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="62" x="13592" y="5528" width="336" height="1234">
+   <properties>
+    <property name="Room" type="int" value="23"/>
+   </properties>
+  </object>
+  <object id="63" x="1700" y="7727.27" width="1721.21" height="939.394">
+   <properties>
+    <property name="Room" type="int" value="6"/>
+   </properties>
+  </object>
+  <object id="64" x="457.576" y="8012.12" width="1181.82" height="221.212">
+   <properties>
+    <property name="Room" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="65" x="466.667" y="7887.88" width="209.091" height="1327.27">
+   <properties>
+    <property name="Room" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="66" x="851.515" y="7884.85" width="206.061" height="160.606">
+   <properties>
+    <property name="Room" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="67" x="993.939" y="8151.52" width="190.909" height="196.97">
+   <properties>
+    <property name="Room" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="68" x="345.455" y="8400" width="215.152" height="206.061">
+   <properties>
+    <property name="Room" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="69" x="615.152" y="8533.33" width="181.818" height="212.121">
+   <properties>
+    <property name="Room" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="70" x="587.879" y="8918.18" width="203.03" height="212.121">
+   <properties>
+    <property name="Room" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="71" x="151.515" y="9239.39" width="975.758" height="1612.12">
+   <properties>
+    <property name="Room" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="72" x="1130.3" y="9930.3" width="1215.15" height="215.152">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="73" x="2130.3" y="9172.73" width="227.273" height="1703.03">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="74" x="2336.36" y="9166.67" width="1624.24" height="221.212">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="75" x="2645.45" y="8696.97" width="209.091" height="803.03">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="76" x="3027.27" y="9033.33" width="215.152" height="481.818">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="77" x="3415.15" y="9039.39" width="218.182" height="478.788">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="78" x="2012.12" y="9551.52" width="221.212" height="221.212">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="79" x="2318.18" y="9693.94" width="151.515" height="193.939">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="80" x="2312.12" y="10066.7" width="151.515" height="218.182">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="81" x="2284.85" y="10445.5" width="169.697" height="215.152">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="82" x="1242.42" y="9812.12" width="200" height="469.697">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="83" x="1621.21" y="9821.21" width="218.182" height="451.515">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="84" x="3993.94" y="8990.91" width="1096.97" height="830.303"/>
+  <object id="85" x="3224.24" y="9627.27" width="1109.09" height="593.939"/>
+ </objectgroup>
+</map>
