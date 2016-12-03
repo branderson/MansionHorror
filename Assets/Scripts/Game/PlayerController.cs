@@ -43,6 +43,7 @@ namespace Assets.Game
             _currentCheckpoint = new Vector2(0f, 0f);
             AcquireLens(Lens.NoLens);
             _rigidbody = GetComponent<Rigidbody2D>();
+            _enemyColliders = new List<Collider2D>();
         }
 
         private void Update()
