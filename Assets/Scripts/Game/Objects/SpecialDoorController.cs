@@ -9,20 +9,14 @@ using UnityEngine;
 using Assets.Game;
 using UnityEngine.UI;
 
-
-
-public class DoorController : CustomMonoBehaviour {
+public class SpecialDoorController : CustomMonoBehaviour {
 
     [SerializeField]
-    private SpriteRenderer _doorRenderer;
-    [SerializeField]
-    private Sprite _openDoorSprite;
-    [SerializeField]
-    private Sprite _closedDoorSprite;
+    private Lens _lens;
+
 
     // Components
     private Rigidbody2D _rigidbody;
-    private bool status = false;
 
     private void Awake()
     {
@@ -31,15 +25,14 @@ public class DoorController : CustomMonoBehaviour {
 
     private void onInteraction(PlayerController controller)
     {
-        if(status)
+        if (controller.ActiveLens == _lens)
         {
-            _doorRenderer.sprite = _openDoorSprite;
             _rigidbody.isKinematic = true;
         }
         else
         {
-            _doorRenderer.sprite = _closedDoorSprite;
             _rigidbody.isKinematic = false;
-        }
+        }   
     }
+
 }
