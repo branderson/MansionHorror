@@ -57,9 +57,9 @@ namespace Assets.Game
         {
             float hor = Input.GetAxis("Horizontal");
             float ver = Input.GetAxis("Vertical");
-            Vector2 move = new Vector2(hor, ver) * _moveSpeed * Time.deltaTime;
+            Vector2 move = new Vector2(hor, ver) * _moveSpeed;
 
-            transform.Translate(move);
+            _rigidbody.velocity = move;
         }
 
         private void HandleLensControl()

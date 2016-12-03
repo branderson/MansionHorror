@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4833823482598052}
   - component: {fileID: 212208681150949508}
+  - component: {fileID: 61750363854020816}
   m_Layer: 0
   m_Name: RecOutSE
   m_TagString: Untagged
@@ -40,6 +41,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61750363854020816
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1337848131909880}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.25, y: -0.25}
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
 --- !u!212 &212208681150949508
 SpriteRenderer:
   m_ObjectHideFlags: 1
