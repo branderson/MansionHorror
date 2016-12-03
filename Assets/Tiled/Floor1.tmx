@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="128" tileheight="128" nextobjectid="3">
+ <tileset firstgid="1" name="Mansion" tilewidth="128" tileheight="128" tilecount="2500" columns="20">
+  <image source="Tileset.png" width="2560" height="2560"/>
+ </tileset>
+ <layer name="RoomLayout" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt1kEKwjAQBdBRN+K+9QzqIfUOemAjGgg1dGcT7HvwFyWb0A+ZiQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWK/xk2vKeSa3Rvdbm9zHMWWTsq1klzK0uuDKlH0MxfdYOeP39NGX8p+fUg7xPTsuoY+l5D7u8Z4V+zA/Wph7n7xXy9NHX/TRF330RR99yfvtdLe177aR99tpavvuK4821wQAAACAv/UEY5gPlg==
+  </data>
+ </layer>
+ <objectgroup name="RoomBoundaries"/>
+</map>
