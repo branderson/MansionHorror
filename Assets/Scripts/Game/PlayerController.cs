@@ -14,7 +14,6 @@ namespace Assets.Game
         [SerializeField] private float _moveSpeed = 1f;
         [SerializeField] private float _maxSanity = 100f;
         [SerializeField] private float _sanityDeteriorateRate = 2f;
-        [SerializeField] private float _sanityRegainRate = 2f;
 
         // Checkpoints
         private Vector2 _currentCheckpoint;
@@ -67,6 +66,10 @@ namespace Assets.Game
             {
                 CycleLens(-1);
             }
+            if (Input.GetButtonDown("NoLens"))
+            {
+                SetLens(Lens.NoLens);
+            }
             if (Input.GetButtonDown("Lens1"))
             {
                 SetLens(Lens.Lens1);
@@ -86,17 +89,13 @@ namespace Assets.Game
         /// </summary>
         private void HandleSanity()
         {
-            if(_activeLens == Lens.NoLens)
+            if (_currentSanity <= 0)
+            {
+                TurnInsane();
+            }
+            else if (_activeLens == Lens.NoLens)
             {
                 _currentSanity -= (_sanityDeteriorateRate * (_lenses.Count - 1)) * Time.deltaTime;
-                if (_currentSanity <= 0)
-                {
-                    TurnInsane();
-                }
-            }
-            else if(_currentSanity < _maxSanity)
-            {
-                _currentSanity += Mathf.Max(_maxSanity, (_sanityRegainRate / (_lenses.Count - 1)) * Time.deltaTime);
             }
         }
 
@@ -174,14 +173,64 @@ namespace Assets.Game
             controller.transform.SetParent(_lensTransform, false);
         }
 
-        public float GetSanity()
+
+        public float Sanity
         {
-            return _currentSanity;
+            get
+            {
+                return _currentSanity;
+            }
+            //Set percent of max. 1 = 100%, 0.5 = 50%
+            set
+            {
+                _currentSanity = Mathf.Max(_maxSanity, value * _maxSanity);
+                if(_currentSanity <= 0)
+                {
+                    TurnInsane();
+                }
+            }
         }
 
-        public void SetSanity(float newSanity)
+        /// <summary>
+        /// Increasethe player sanity by percent. 1 = 100%, 0.5 = 50%
+        /// </summary>
+        /// <param name="newSanity">
+        /// Percent sanity to increase in decimal form
+        /// </param>
+        public void IncreaseSanityByPercent(float newSanity)
         {
-            _currentSanity = newSanity;
+            _currentSanity += Mathf.Max(_maxSanity, newSanity * _maxSanity);
+        }
+
+        /// <summary>
+        /// Restore the player sanity to full
+        /// </summary>
+        public void RestoreSanityToFull()
+        {
+            _currentSanity = _maxSanity;
+        }
+
+        /// <summary>
+        /// Hit the player and drain a percent of sanity
+        /// </summary>
+        /// <param name="sanityDamage">
+        /// Percent of sanity to drain. 0.5 = 50%
+        /// </param>
+        public void Hit(float sanityDamage)
+        {
+            _currentSanity -= sanityDamage * _maxSanity;
+            if (_currentSanity <= 0)
+            {
+                TurnInsane();
+            }
+        }
+
+        public Lens ActiveLens
+        {
+            get
+            {
+                return _activeLens;
+            }
         }
 
         /// <summary>
