@@ -19,11 +19,14 @@ namespace Assets.Game
         private LensController _activeLensController;
 
         // Components
-//        private Rigidbody2D _rigidbody;
+        private Rigidbody2D _rigidbody;
+        //private Collider2D[] _colliders;
+        private List<Collider2D> _enemyColliders;
 
         private void Awake()
         {
-//            _rigidbody = GetComponent<Rigidbody2D>();
+            _rigidbody = GetComponent<Rigidbody2D>();
+            //_colliders = GetComponentsInChildren<Collider2D>();
         }
 
         private void Update()
@@ -114,6 +117,30 @@ namespace Assets.Game
             // Add the lens to the player
             _lenses[lens] = controller;
             controller.transform.SetParent(_lensTransform, false);
+        }
+
+        /// <summary>
+        /// Interact
+        /// </summary>
+        /// <param name="lens">
+        /// Type of lens to instantiate
+        /// </param>
+        public void Interact()
+        {
+            foreach( Collider2D collider in _enemyColliders)
+            {
+                collider.gameObject.SendMessage("OnInteract",this);
+            }
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            _enemyColliders.Add(collision.collider);
+        }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            _enemyColliders.Remove(collision.collider);
         }
     }
 }
