@@ -34,7 +34,7 @@ namespace Assets.Game.Enemies
             base.Attack(Player, Cooldown, Damage, ShakeDirection, ShakeDuration, ShakeIntensity);
             foreach (ArmorAI armor in Armors)
             {
-                armor.ActivateSuit();
+                armor.Alert(Player.transform.position);
             }
         }
     }

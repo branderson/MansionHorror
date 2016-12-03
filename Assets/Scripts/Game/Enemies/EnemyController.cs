@@ -16,6 +16,8 @@ namespace Assets.Game
         protected Vector2 _destination;
         protected Vector2 _returnPosition;
         protected CameraController Camera;
+        protected float _moveSpeed = 0f;
+        protected bool _return = false;
         
         public virtual void Awake()
         {
@@ -92,21 +94,49 @@ namespace Assets.Game
         /// <summary>
         /// Switch between patrolling and not patrolling
         /// </summary>
-        public virtual void SwitchPatrol()
+        public virtual void StopPatrol()
         {
-            _patrolling = !_patrolling;
+            _patrolling = false;
+        }
+
+        public virtual void StartPatrol()
+        {
+            _patrolling = true;
         }
 
         public virtual void ReturnToStartPosition()
         {
+            ReturnToStartPosition(_patrolSpeed);
+        }
+
+        public virtual void ReturnToStartPosition(float Speed)
+        {
             _move = true;
             _destination = _startPosition;
+            _moveSpeed = Speed;
+        }
+
+        public virtual void ReturnToPatrol(Vector2 Location)
+        {
+            ReturnToPatrol(Location, _patrolSpeed);
+        }
+
+        public virtual void ReturnToPatrol(Vector2 Location, float Speed)
+        {
+            _return = true;
+            MoveToLocation(Location, Speed);
         }
 
         public virtual void MoveToLocation(Vector2 Location)
         {
+            MoveToLocation(Location, _patrolSpeed);
+        }
+
+        public virtual void MoveToLocation(Vector2 Location, float Speed)
+        {
             _move = true;
             _destination = Location;
+            _moveSpeed = Speed;
         }
 
         public Vector2 ReturnLocation
@@ -135,8 +165,13 @@ namespace Assets.Game
             }
             else if (_move)
             {
-                if(MoveTowardsPosition(_destination, _patrolSpeed))
+                if(MoveTowardsPosition(_destination, _moveSpeed))
                 {
+                    if (_return)
+                    {
+                        StartPatrol();
+                    }
+                    _return = false;
                     _move = false;
                 }
             }
@@ -231,6 +266,15 @@ namespace Assets.Game
         public virtual bool CanAttack()
         {
             return !_onCooldown;
+        }
+
+        public virtual Vector2 CurrentPatrolTarget()
+        {
+            if(_patrolPoints.Count == 0)
+            {
+                return new Vector2(0, 0);
+            }
+            return _patrolPoints[_currentPatrolPoint];
         }
     }
 }
