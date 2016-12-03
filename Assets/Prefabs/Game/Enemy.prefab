@@ -167,5 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfa343311809c694f9fc0c5c885742ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ActiveLens: 
   _dormant: {fileID: 4066305258588912}
   _active: {fileID: 4670490019156976}
