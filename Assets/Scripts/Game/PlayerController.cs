@@ -12,24 +12,28 @@ namespace Assets.Game
     {
         [SerializeField] private Transform _lensTransform;
         [SerializeField] private float _moveSpeed = 1f;
+        [SerializeField] private float _maxSanity = 100f;
 
         // Lenses
         private Dictionary<Lens, LensController> _lenses;
         private Lens _activeLens;
         private LensController _activeLensController;
+        private float _currentSanity;
 
         // Components
 //        private Rigidbody2D _rigidbody;
 
         private void Awake()
         {
-//            _rigidbody = GetComponent<Rigidbody2D>();
+            _currentSanity = _maxSanity;
+//          _rigidbody = GetComponent<Rigidbody2D>();
         }
 
         private void Update()
         {
             HandleMovement();
             HandleLensControl();
+            HandleSanity();
         }
 
         private void HandleMovement()
@@ -63,6 +67,11 @@ namespace Assets.Game
             {
                 SetLens(Lens.Lens3);
             }
+        }
+
+        private void HandleSanity()
+        {
+
         }
 
         /// <summary>
