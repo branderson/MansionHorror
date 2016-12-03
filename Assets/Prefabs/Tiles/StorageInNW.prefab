@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4634168565136150}
   - component: {fileID: 212274555665930560}
+  - component: {fileID: 61310602844004694}
+  - component: {fileID: 61897530264801876}
   m_Layer: 0
   m_Name: StorageInNW
   m_TagString: Untagged
@@ -40,6 +42,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61310602844004694
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816008408809084}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.25}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5}
+--- !u!61 &61897530264801876
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816008408809084}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.25, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1}
 --- !u!212 &212274555665930560
 SpriteRenderer:
   m_ObjectHideFlags: 1

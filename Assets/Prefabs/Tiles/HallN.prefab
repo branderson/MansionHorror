@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4832394876893580}
   - component: {fileID: 212513581519849930}
+  - component: {fileID: 61496569557682004}
   m_Layer: 0
   m_Name: HallN
   m_TagString: Untagged
@@ -40,6 +41,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61496569557682004
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1930150736577512}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.25}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5}
 --- !u!212 &212513581519849930
 SpriteRenderer:
   m_ObjectHideFlags: 1
