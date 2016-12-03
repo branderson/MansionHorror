@@ -14,7 +14,6 @@ namespace Assets.Game
         [SerializeField] private float _moveSpeed = 1f;
         [SerializeField] private float _maxSanity = 100f;
         [SerializeField] private float _sanityDeteriorateRate = 2f;
-        [SerializeField] private float _sanityRegainRate = 2f;
 
         // Checkpoints
         private Vector2 _currentCheckpoint;
@@ -185,6 +184,10 @@ namespace Assets.Game
             set
             {
                 _currentSanity = Mathf.Max(_maxSanity, value * _maxSanity);
+                if(_currentSanity <= 0)
+                {
+                    TurnInsane();
+                }
             }
         }
 
@@ -207,6 +210,20 @@ namespace Assets.Game
             _currentSanity = _maxSanity;
         }
 
+        /// <summary>
+        /// Hit the player and drain a percent of sanity
+        /// </summary>
+        /// <param name="sanityDamage">
+        /// Percent of sanity to drain. 0.5 = 50%
+        /// </param>
+        public void Hit(float sanityDamage)
+        {
+            _currentSanity -= sanityDamage * _maxSanity;
+            if (_currentSanity <= 0)
+            {
+                TurnInsane();
+            }
+        }
 
         public Lens ActiveLens
         {
