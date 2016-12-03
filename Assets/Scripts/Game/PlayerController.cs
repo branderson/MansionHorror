@@ -230,14 +230,6 @@ namespace Assets.Game
             }
         }
 
-        public Lens ActiveLens
-        {
-            get
-            {
-                return _activeLens;
-            }
-        }
-
         /// <summary>
         /// Interact
         /// </summary>
