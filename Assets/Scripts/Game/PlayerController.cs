@@ -79,10 +79,12 @@ namespace Assets.Game
                 if (_activeLensController)
                 {
                     _activeLensController.gameObject.SetActive(false);
+                    EventManager.Instance.TriggerEvent("Deactivate " + _activeLens);
                 }
                 _activeLens = lens;
                 _activeLensController = controller;
                 _activeLensController.gameObject.SetActive(true);
+                EventManager.Instance.TriggerEvent("Activate " + lens);
             }
         }
 
