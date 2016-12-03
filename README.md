@@ -64,6 +64,9 @@ We will be grouped into teams depending on what portion of the project we want t
 <b>Team Lead:</b> Victor  
 <b>Role:</b> Write AI scripts to make each of the game's enemies feel different and interesting.
 
+### Trello
+Our Trello workflow will be pretty simple. If you think of something that needs to be done, make a card on the ToDo list and write a description describing exactly what needs to be done. Drag it up or down based on the priority of the feature/bug. If you start working on something that isn't on the ToDo list, make a card on the Assigned list and click Members on the card and add yourself. If you're looking for something to do, pick a card off the ToDo list, drag it to Assigned, and add yourself to the card. Most of us should be assigned to exactly one card at pretty much all times. When you're done with a card, drag it to Done. If you have an Idea you want to discuss, make a card on the Ideas list describing your idea. We can discuss Ideas through comments on the card. An Idea can be moved to ToDo once we decide we want to implement it. Finally, the Random Stuff list is for random posts and discussion unrelated to game features.
+
 ### We are the Asset Makers, and We are the Makers of Memes
 This section is specifically targetted at Adina, Mike, and anyone else working primarily on assets. For you guys, you won't be working directly with version control very much since it'll be unnecessarily cumbersome to deal with. Instead, you guys will use a public Dropbox folder that I'll set up for you, and will keep everything you make in there. When something you make needs to be used in the game, someone will copy the file into the game's Assets directory and push it to version control. We've found this method of dealing with asset production is by far the easiest and most efficient.
 
