@@ -6,6 +6,7 @@ namespace Assets.Game.Lenses
 {
     public enum Lens
     {
+        NoLens,
         Lens1,
         Lens2, 
         Lens3,

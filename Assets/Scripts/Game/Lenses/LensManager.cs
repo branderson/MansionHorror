@@ -5,6 +5,7 @@ namespace Assets.Game.Lenses
 {
     public class LensManager : Singleton<LensManager>
     {
+        [SerializeField] private GameObject _noLensPrefab;
         [SerializeField] private GameObject _lens1Prefab;
         [SerializeField] private GameObject _lens2Prefab;
         [SerializeField] private GameObject _lens3Prefab;
@@ -25,6 +26,9 @@ namespace Assets.Game.Lenses
             GameObject instance = null;
             switch (lens)
             {
+                case Lens.NoLens:
+                    instance = Instantiate(_noLensPrefab);
+                    break;
                 case Lens.Lens1:
                     instance = Instantiate(_lens1Prefab);
                     break;

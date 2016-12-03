@@ -13,19 +13,29 @@ namespace Assets.Game
         [SerializeField] private Transform _lensTransform;
         [SerializeField] private float _moveSpeed = 1f;
         [SerializeField] private float _maxSanity = 100f;
+        [SerializeField] private float _sanityDeteriorateRate = 2f;
+        [SerializeField] private float _sanityRegainRate = 2f;
+
+        // Checkpoints
+        private Vector2 _currentCheckpoint;
 
         // Lenses
         private Dictionary<Lens, LensController> _lenses;
-        private Lens _activeLens;
+        private Lens _activeLens = Lens.NoLens;
         private LensController _activeLensController;
+
+        // Sanity
         private float _currentSanity;
 
         // Components
-//        private Rigidbody2D _rigidbody;
+        //        private Rigidbody2D _rigidbody;
 
         private void Awake()
         {
+            _lenses = new Dictionary<Lens, LensController>();
             _currentSanity = _maxSanity;
+            _currentCheckpoint = new Vector2(0f, 0f);
+            AcquireLens(Lens.NoLens);
 //          _rigidbody = GetComponent<Rigidbody2D>();
         }
 
@@ -69,9 +79,46 @@ namespace Assets.Game
             }
         }
 
+        /// <summary>
+        /// Handle player sanity
+        /// </summary>
         private void HandleSanity()
         {
+            if(_activeLens == Lens.NoLens)
+            {
+                _currentSanity -= (_sanityDeteriorateRate * (_lenses.Count - 1)) * Time.deltaTime;
+                if (_currentSanity <= 0)
+                {
+                    TurnInsane();
+                }
+            }
+            else if(_currentSanity < _maxSanity)
+            {
+                _currentSanity += Mathf.Max(_maxSanity, (_sanityRegainRate / (_lenses.Count - 1)) * Time.deltaTime);
+            }
+        }
 
+        /// <summary>
+        /// Handle when the player turns insane
+        /// </summary>
+        private void TurnInsane()
+        {
+            //Play animation for the player going insane
+
+            //TO-DO
+
+            //Reset the player
+            ResetPlayer();
+        }
+
+
+        /// <summary>
+        /// Reset the player after being killed
+        /// </summary>
+        private void ResetPlayer()
+        {
+            _currentSanity = _maxSanity;
+            transform.SetPosition2D(_currentCheckpoint);
         }
 
         /// <summary>
@@ -115,7 +162,7 @@ namespace Assets.Game
         /// <param name="lens">
         /// Type of lens to instantiate
         /// </param>
-        public void AquireLens(Lens lens)
+        public void AcquireLens(Lens lens)
         {
             LensController controller = LensManager.Instance.InstantiateLens(lens);
             if (controller == null) return;
@@ -123,6 +170,16 @@ namespace Assets.Game
             // Add the lens to the player
             _lenses[lens] = controller;
             controller.transform.SetParent(_lensTransform, false);
+        }
+
+        public float GetSanity()
+        {
+            return _currentSanity;
+        }
+        
+        public void SetSanity(float newSanity)
+        {
+            _currentSanity = newSanity;
         }
     }
 }
