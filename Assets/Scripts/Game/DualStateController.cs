@@ -9,6 +9,9 @@ namespace Assets.Game
         [SerializeField] private Transform _dormant;
         [SerializeField] private Transform _active;
 
+        public bool ai_enabled = false;
+
+
         private void Awake()
         {
             _dormant.gameObject.SetActive(true);

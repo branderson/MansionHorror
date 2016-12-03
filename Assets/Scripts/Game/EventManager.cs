@@ -25,7 +25,10 @@ namespace Assets.Game
         private Queue<Tuple<string, UnityAction>> _voidDisposalQueue;
         // TODO: Listeners are not always called when events are triggered
          
-        protected EventManager() { }
+        protected EventManager()
+        {
+            Initialize();
+        }
 
 		protected void Start()
 		{
