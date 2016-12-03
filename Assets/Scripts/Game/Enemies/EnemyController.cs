@@ -15,11 +15,13 @@ namespace Assets.Game
         protected Vector2 _startPosition;
         protected Vector2 _destination;
         protected Vector2 _returnPosition;
+        protected CameraController Camera;
         
         public virtual void Awake()
         {
             _startPosition = transform.position;
             _destination = _startPosition;
+            Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>();
         }
 
         /// <summary>
@@ -184,7 +186,6 @@ namespace Assets.Game
             return (Player.transform.position - transform.position).sqrMagnitude <= ((AttackRange - Offset) * (AttackRange - Offset));
         }
 
-
         /// <summary>
         /// Take away Damage% sanity from player
         /// </summary>
@@ -193,10 +194,26 @@ namespace Assets.Game
         /// <param name="Damage">Percent sanity to take from player</param>
         public virtual void Attack(PlayerController Player, float Cooldown, float Damage)
         {
+            Attack(Player, Cooldown, Damage, new Vector2(0, 0), 0, 0);
+        }
+
+
+        /// <summary>
+        /// Take away Damage% sanity from player and causes camera to shake
+        /// </summary>
+        /// <param name="Player">Player controller</param>
+        /// <param name="Cooldown">Time until next attack</param>
+        /// <param name="Damage">Percent sanity to take from player</param>
+        /// <param name="ShakeDirection"> Direction the camera shakes in</param>
+        /// <param name="ShakeDuratioin">How long the camera will shake</param>
+        /// <param name="ShakeIntensity">How intense the camera shakes</param>
+        public virtual void Attack(PlayerController Player, float Cooldown, float Damage, Vector2 ShakeDirection, float ShakeDuratioin, float ShakeIntensity)
+        {
             if (!_onCooldown)
             {
                 //Attack animation
                 Player.Hit(Damage);
+                Camera.Shake(ShakeDuratioin, ShakeDirection, ShakeIntensity);
                 _onCooldown = true;
                 Invoke("RefreshAttack", Cooldown);
                 Debug.Log("Attacked");

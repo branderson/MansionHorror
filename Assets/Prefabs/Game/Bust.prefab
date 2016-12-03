@@ -35,8 +35,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4004613529992982}
   - component: {fileID: 212097580497824248}
-  - component: {fileID: 114568985504184884}
-  - component: {fileID: 114549595064053306}
+  - component: {fileID: 114484149464227838}
+  - component: {fileID: 114280625820567058}
   m_Layer: 0
   m_Name: Active
   m_TagString: Untagged
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 4531956519775392}
   - component: {fileID: 114476884516608408}
   m_Layer: 0
-  m_Name: Chair
+  m_Name: Bust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,6 +159,19 @@ Transform:
   m_Father: {fileID: 4531956519775392}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114280625820567058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1149180439263380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7704d9048504fdd4dba489e165e7cc71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _patrolPoints: []
+  _patrolSpeed: 1
 --- !u!114 &114476884516608408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -175,7 +188,7 @@ MonoBehaviour:
   _active: {fileID: 4004613529992982}
   _debugOn: 0
   ai_enabled: 0
---- !u!114 &114549595064053306
+--- !u!114 &114484149464227838
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -183,32 +196,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1149180439263380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b1f7c24491e88d4c9bb205e58611d04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6de71f587684ba54695d755c8276a346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMax: 4
-  _speedMin: 1
+  _armors: []
   _damage: 0.2
-  _attackRange: 1
-  _switchTimeMin: 0.3
-  _switchTimeMax: 0.8
-  _cooldown: 1
-  _shakeDuration: 0.25
-  _shakeIntensity: 1.5
-  _activeness: 1
---- !u!114 &114568985504184884
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1149180439263380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b96652651741edf47a367f5a0d65efa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _patrolPoints: []
-  _patrolSpeed: 1
+  _sirenRange: 3
+  _cooldown: 5
+  _shakeDuration: 2
+  _shakeIntensity: 0.5
 --- !u!212 &212097580497824248
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -240,7 +236,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 41c064eab11ca77499136e05e6b3bbad, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 41c064eab11ca77499136e05e6b3bbad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

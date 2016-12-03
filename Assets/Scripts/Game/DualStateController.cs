@@ -8,14 +8,15 @@ namespace Assets.Game
         [SerializeField] private string ActiveLens;
         [SerializeField] private Transform _dormant;
         [SerializeField] private Transform _active;
+        [SerializeField] private bool _debugOn = false;
 
         public bool ai_enabled = false;
 
 
         private void Awake()
         {
-            _dormant.gameObject.SetActive(true);
-            _active.gameObject.SetActive(false);
+            _dormant.gameObject.SetActive(!_debugOn);
+            _active.gameObject.SetActive(_debugOn);
         }
 
         private void Start()

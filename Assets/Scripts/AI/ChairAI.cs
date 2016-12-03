@@ -17,6 +17,8 @@ namespace Assets.AI
         [SerializeField] protected float _switchTimeMin = .3f;
         [SerializeField] protected float _switchTimeMax = .8f;
         [SerializeField] protected float _cooldown = 1f;
+        [SerializeField] protected float _shakeDuration = 0.25f;
+        [SerializeField] protected float _shakeIntensity = 1.5f;
         [SerializeField] protected Activeness _activeness = Activeness.Average;
         private GameObject _player;
         private PlayerController _playerController;
@@ -34,20 +36,21 @@ namespace Assets.AI
         {
             if (_controller.MoveTowardsCharacter(_player, _attackRange, Random.Range(_speedMin, _speedMax + 1), _attackStatus))
             {
-                _controller.Attack(_playerController, _cooldown, _damage);
+                Vector2 direction = (_player.transform.position - transform.position).normalized;
+                _controller.Attack(_playerController, _cooldown, _damage, direction, _shakeDuration, _shakeIntensity);
             }
-            if (!IsInvoking("NextAttack"))
+            if (!IsInvoking("NextMove"))
             {
-                Invoke("NextAttack", Random.Range(_switchTimeMin, _switchTimeMax));
+                Invoke("NextMove", Random.Range(_switchTimeMin, _switchTimeMax));
             }
         }
 
-        private void NextAttack()
+        private void NextMove()
         {
-            int nextAttack = Random.Range(0,10);
+            int nextMove = Random.Range(0,10);
             if (_activeness == Activeness.Low)
             {
-                switch (nextAttack)
+                switch (nextMove)
                 {
                     case 0:
                         _attackStatus = Attack.Left;
@@ -69,7 +72,7 @@ namespace Assets.AI
             }
             else if (_activeness == Activeness.Average)
             {
-                switch (nextAttack)
+                switch (nextMove)
                 {
                     case 0:
                     case 1:
@@ -91,7 +94,7 @@ namespace Assets.AI
             }
             else if (_activeness == Activeness.High)
             {
-                switch (nextAttack)
+                switch (nextMove)
                 {
                     case 0:
                     case 1:

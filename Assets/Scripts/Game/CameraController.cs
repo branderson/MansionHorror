@@ -12,13 +12,32 @@ namespace Assets.Game
         private Vector3 _velocity;
         private Vector3 _goalPos;
 
+        private bool _shaking = false;
+        private float _shakeDuration = 0f;
+        private Vector2 _shakeDirection;
+        private float _shakeIntensity = 1f;
+
         private void Awake()
         {
             _goalPos = transform.position;
+            _shakeDirection = new Vector2(0, 0);
         }
 
         private void Update()
         {
+            if (_shaking)
+            {
+                Vector3 move = (Mathf.Sin(_shakeDuration * 2 * 15) * _shakeDirection * _shakeIntensity) / 10f;
+                transform.Translate(move);
+
+                _shakeDuration -= Time.deltaTime;
+                if (_shakeDuration <= 0)
+                {
+                    _shakeDuration = 0;
+                    _shaking = false;
+                }
+                return;
+            }
             float moveDistance = SquaredDistance2(_follow.transform.position) - _bufferDistanceSquared;
             if (moveDistance > 0)
             {
@@ -29,6 +48,14 @@ namespace Assets.Game
             }
 
             transform.position = Vector3.SmoothDamp(transform.position, _goalPos, ref _velocity, _speed);
+        }
+
+        public void Shake(float Duration, Vector2 Direction, float Intensity)
+        {
+            _shaking = true;
+            _shakeDuration = Duration;
+            _shakeDirection = Direction;
+            _shakeIntensity = Intensity;
         }
     }
 }
