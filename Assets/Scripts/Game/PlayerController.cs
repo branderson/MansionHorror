@@ -50,6 +50,10 @@ namespace Assets.Game
         {
             HandleMovement();
             HandleLensControl();
+            if(Input.GetButtonDown("Interact"))
+            {
+                Interact();
+            }
             HandleSanity();
         }
 
@@ -239,9 +243,10 @@ namespace Assets.Game
         /// </param>
         public void Interact()
         {
-            foreach( Collider2D collider in _enemyColliders)
+            foreach ( Collider2D collider in _enemyColliders)
             {
-                collider.gameObject.SendMessage("OnInteract",this);
+                
+                collider.gameObject.SendMessage("onInteract",this,SendMessageOptions.DontRequireReceiver);
             }
         }
 

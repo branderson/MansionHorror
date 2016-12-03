@@ -13,33 +13,35 @@ using UnityEngine.UI;
 
 public class DoorController : CustomMonoBehaviour {
 
-    [SerializeField]
-    private SpriteRenderer _doorRenderer;
-    [SerializeField]
-    private Sprite _openDoorSprite;
-    [SerializeField]
-    private Sprite _closedDoorSprite;
+//    [SerializeField]
+//private SpriteRenderer _doorRenderer;
+ //   [SerializeField]
+//    private Sprite _openDoorSprite;
+//    [SerializeField]
+ //   private Sprite _closedDoorSprite;
 
     // Components
-    private Rigidbody2D _rigidbody;
+    private Collider2D _collider;
     private bool status = false;
 
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
+        _collider = GetComponent<Collider2D>();
+        _collider.isTrigger = false;
     }
 
-    private void onInteraction(PlayerController controller)
+    private void onInteract(PlayerController controller)
     {
-        if(status)
+        if(_collider.isTrigger)
         {
-            _doorRenderer.sprite = _openDoorSprite;
-            _rigidbody.isKinematic = true;
+            //       _doorRenderer.sprite = _openDoorSprite;
+            _collider.isTrigger = false;
+           
         }
         else
         {
-            _doorRenderer.sprite = _closedDoorSprite;
-            _rigidbody.isKinematic = false;
+            //         _doorRenderer.sprite = _closedDoorSprite;
+            _collider.isTrigger = true;
         }
     }
 }

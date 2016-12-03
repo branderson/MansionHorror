@@ -18,7 +18,7 @@ public class LensPickupController : CustomMonoBehaviour
     // Components
     private Rigidbody2D _rigidbody;
 
-    private void onInteraction(PlayerController controller)
+    private void onInteract(PlayerController controller)
     {
         controller.AcquireLens(_lens);
         Destroy(this.gameObject);
