@@ -31,6 +31,11 @@ namespace Assets.Game
         //private Collider2D[] _colliders;
         private List<Collider2D> _enemyColliders;
 
+        public Lens ActiveLens
+        {
+            get { return _activeLens; }
+        }
+
         private void Awake()
         {
             _lenses = new Dictionary<Lens, LensController>();
