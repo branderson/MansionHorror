@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Assets.Game.Lenses;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Game
 {
@@ -16,7 +17,7 @@ namespace Assets.Game
         [SerializeField] private float _sanityDeteriorateRate = 2f;
 
         // Checkpoints
-        private Vector2 _currentCheckpoint;
+        private Vector3 _currentCheckpoint;
 
         // Lenses
         private Dictionary<Lens, LensController> _lenses;
@@ -36,14 +37,26 @@ namespace Assets.Game
             get { return _activeLens; }
         }
 
+        public void LoadScene(string scene, Vector2 position)
+        {
+            _currentCheckpoint = position;
+            SceneManager.LoadScene(scene, LoadSceneMode.Single);
+        }
+
         private void Awake()
         {
             _lenses = new Dictionary<Lens, LensController>();
             _currentSanity = _maxSanity;
-            _currentCheckpoint = new Vector2(0f, 0f);
             AcquireLens(Lens.NoLens);
             _rigidbody = GetComponent<Rigidbody2D>();
             _enemyColliders = new List<Collider2D>();
+            _currentCheckpoint = transform.position;
+            SceneManager.sceneLoaded += SceneLoaded;
+        }
+
+        private void SceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            transform.position = _currentCheckpoint;
         }
 
         private void Update()
@@ -61,9 +74,9 @@ namespace Assets.Game
         {
             float hor = Input.GetAxis("Horizontal");
             float ver = Input.GetAxis("Vertical");
-            Vector2 move = new Vector2(hor, ver) * _moveSpeed * Time.deltaTime;
+            Vector2 move = new Vector2(hor, ver) * _moveSpeed;
 
-            transform.Translate(move);
+            _rigidbody.velocity = move;
         }
 
         private void HandleLensControl()

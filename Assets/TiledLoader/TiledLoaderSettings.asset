@@ -18,7 +18,7 @@ MonoBehaviour:
   TiledLoaderPath: TiledLoader
   DefaultScalingFactor: 1
   ParentTilesToLayers: 1
-  ParentLayersToTiledLoader: 0
+  ParentLayersToTiledLoader: 1
   MapTiledYToUnityZ: 0
   IgnoreLayerVisible: 0
   DockWindows: 1
