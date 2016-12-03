@@ -147,7 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lensTransform: {fileID: 4316323337122742}
-  _moveSpeed: 1
+  _moveSpeed: 3
+  _maxSanity: 100
+  _sanityDeteriorateRate: 2
+  _sanityRegainRate: 2
 --- !u!212 &212292819466241002
 SpriteRenderer:
   m_ObjectHideFlags: 1
