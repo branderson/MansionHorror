@@ -20,8 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4485287826172818}
   - component: {fileID: 212408696682231774}
-  - component: {fileID: 114267684424288088}
-  - component: {fileID: 61533601329056276}
   m_Layer: 0
   m_Name: Bed1DoorN
   m_TagString: Untagged
@@ -42,31 +40,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61533601329056276
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1855499096785930}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
---- !u!114 &114267684424288088
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1855499096785930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbcd579b43ef0554c814a955d2274469, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212408696682231774
 SpriteRenderer:
   m_ObjectHideFlags: 1
