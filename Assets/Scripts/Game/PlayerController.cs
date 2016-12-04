@@ -40,7 +40,6 @@ namespace Assets.Game
 
         // UI Management
         private GameObject _sanityBar;
-        private GameObject _currentLens;
 
         public Lens ActiveLens
         {
@@ -74,8 +73,6 @@ namespace Assets.Game
 
         private void Start() {
             _sanityBar = GameObject.Find("SanityBar");
-            _currentLens = GameObject.Find("CurrentLens");
-
         }
 
         private void SceneLoaded(Scene scene, LoadSceneMode mode)
