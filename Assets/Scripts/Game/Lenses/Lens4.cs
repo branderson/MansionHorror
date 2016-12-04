@@ -13,7 +13,7 @@ namespace Assets.Game.Lenses
 
             foreach (ShaderTest shader in _camera.GetComponents<ShaderTest>())
             {
-                if (shader.EffectMaterial.name == "Displace")
+                if (shader.EffectMaterial.name == "Foggy")
                 {
                     _shader = shader;
                 }

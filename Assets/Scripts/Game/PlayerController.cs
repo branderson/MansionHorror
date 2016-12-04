@@ -62,6 +62,9 @@ namespace Assets.Game
             _lenses = new Dictionary<Lens, LensController>();
             _currentSanity = _maxSanity;
             AcquireLens(Lens.NoLens);
+            _activeLens = Lens.NoLens;
+            _activeLensController = _lenses[0];
+            _activeLensController.gameObject.SetActive(true);
             _rigidbody = GetComponent<Rigidbody2D>();
             _renderer = GetComponentInChildren<SpriteRenderer>();
             _enemyColliders = new List<Collider2D>();
@@ -206,9 +209,7 @@ namespace Assets.Game
                     
                     _activeLensController.gameObject.SetActive(false);
                     EventManager.Instance.TriggerEvent("Deactivate " + _activeLens);
-                    _activeLens = Lens.NoLens;
                     _activeLensController.Deactivate();
-
                 }
                 if (_activeLensController != controller)
                 {
@@ -220,7 +221,11 @@ namespace Assets.Game
                 }
                 else
                 {
-                    _activeLensController = null;
+                    _activeLens = Lens.NoLens;
+                    _activeLensController = _lenses[0];
+                    _activeLensController.gameObject.SetActive(true);
+                    _activeLensController.Activate();
+                    
                 }
             }
         }

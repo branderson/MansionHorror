@@ -42,7 +42,7 @@ Material:
     - first:
         name: _DisplaceTex
       second:
-        m_Texture: {fileID: 2800000, guid: 145fc1588d2ce2a44a99f6e7d7d5be5e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2ab744252ac17564db1fb4983d11b854, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
