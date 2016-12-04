@@ -126,6 +126,10 @@ namespace Assets.Game
             {
                 SetLens(Lens.Lens3);
             }
+            if (Input.GetButtonDown("Lens4"))
+            {
+                SetLens(Lens.Lens4);
+            }
         }
 
         /// <summary>
@@ -177,15 +181,28 @@ namespace Assets.Game
             LensController controller;
             if (_lenses.TryGetValue(lens, out controller))
             {
+                
                 if (_activeLensController)
                 {
+                    
                     _activeLensController.gameObject.SetActive(false);
                     EventManager.Instance.TriggerEvent("Deactivate " + _activeLens);
+                    _activeLens = Lens.NoLens;
+                    _activeLensController.Deactivate();
+
                 }
-                _activeLens = lens;
-                _activeLensController = controller;
-                _activeLensController.gameObject.SetActive(true);
-                EventManager.Instance.TriggerEvent("Activate " + lens);
+                if (_activeLensController != controller)
+                {
+                    _activeLens = lens;
+                    _activeLensController = controller;
+                    _activeLensController.gameObject.SetActive(true);
+                    _activeLensController.Activate();
+                    EventManager.Instance.TriggerEvent("Activate " + lens);
+                }
+                else
+                {
+                    _activeLensController = null;
+                }
             }
         }
 

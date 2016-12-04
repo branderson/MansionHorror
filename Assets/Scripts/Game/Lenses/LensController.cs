@@ -19,8 +19,8 @@ namespace Assets.Game.Lenses
     /// </summary>
     public abstract class LensController : CustomMonoBehaviour
     {
-        private void OnEnable()
-        {
-        }
+        public abstract void Activate();
+
+        public abstract void Deactivate();
     }
 }
