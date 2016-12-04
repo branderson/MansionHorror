@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Tinter
-  m_Shader: {fileID: 4800000, guid: c66a6c8122681c44b885dbfe9afd0857, type: 3}
+  m_Name: Standard Blur
+  m_Shader: {fileID: 4800000, guid: dce7c443cb4519345b7e172882630d82, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -15,6 +15,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
+    - first:
+        name: _BlurTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - first:
         name: _BumpMap
       second:
@@ -121,7 +127,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 0.32352942, b: 0.32352942, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}

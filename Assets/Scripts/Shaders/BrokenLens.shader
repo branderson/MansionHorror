@@ -14,18 +14,19 @@
 			"PreviewType" = "Plane"
 		}
 		Cull Off ZWrite Off ZTest Always
-		GrabPass
-		{
-
-		}
+		GrabPass{ }
 		Pass
 		{
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			
-			
 			#include "UnityCG.cginc"
+
+			struct v2f
+			{
+				float4 vertex : TEXCOORD0;
+				float4 uv : SV_POSITION;
+			};
 
 			struct appdata
 			{
@@ -33,25 +34,24 @@
 				float2 uv : TEXCOORD0;
 			};
 
-			struct v2f
-			{
-				float2 uv : TEXCOORD0;
-				float4 vertex : SV_POSITION;
-			};
-
-			sampler2D _MainTex;
-			
-			v2f vert (appdata v)
-			{
+			v2f vert(appdata v) {
 				v2f o;
-				o.vertex = UnityObjectToClipPos(v.vertex);
-				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+				// use UnityObjectToClipPos from UnityCG.cginc to calculate 
+				// the clip-space of the vertex
+				//o.vertex = UnityObjectToClipPos(v.vertex);
+				// use ComputeGrabScreenPos function from UnityCG.cginc
+				// to get the correct texture coordinate
+				//o.vertex = ComputeGrabScreenPos(o.vertex);
 				return o;
 			}
-			
-			fixed4 frag (v2f i) : SV_Target
+
+			sampler2D _BackgroundTexture;
+			float _Triangles;
+
+			half4 frag(v2f i) : SV_Target
 			{
-				
+				half4 bgcolor = tex2Dproj(_BackgroundTexture, i.vertex);
+				return 1 - bgcolor;
 			}
 			ENDCG
 		}
