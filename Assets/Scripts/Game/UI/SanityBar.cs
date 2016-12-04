@@ -8,8 +8,7 @@ public class SanityBar : MonoBehaviour {
     private RectTransform _rect;
 
     private void Awake() {
-        _bar = GameObject.Find("Image");
-        _rect = _bar.GetComponent<RectTransform>();
+
     }
 
     // Changes the size of the sanity bar to match the player's current sanity
@@ -20,8 +19,9 @@ public class SanityBar : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
+        _bar = GameObject.Find("Image");
+        _rect = _bar.GetComponent<RectTransform>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
