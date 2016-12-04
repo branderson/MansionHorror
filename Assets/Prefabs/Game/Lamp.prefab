@@ -168,7 +168,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1149180439263380}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -211,6 +211,7 @@ MonoBehaviour:
   _cooldown: 1
   _shakeDuration: 0.25
   _shakeIntensity: 1.5
+  _radius: 4
 --- !u!114 &114476884516608408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,6 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActiveLens: 
+  _transitionTime: 0
   _dormant: {fileID: 4864421338684502}
   _active: {fileID: 4004613529992982}
   _debugOn: 0

@@ -12,9 +12,11 @@ namespace Assets.AI
         [SerializeField] protected float _cooldown = 1f;
         [SerializeField] protected float _shakeDuration = 0.25f;
         [SerializeField] protected float _shakeIntensity = 1.5f;
+        [SerializeField] protected float _radius = 4f;
         private GameObject _player;
         private PlayerController _playerController;
         private EnemyController _controller;
+        private Vector2 _center;
 
         private void Awake()
         {
@@ -25,11 +27,24 @@ namespace Assets.AI
 
         private void Update()
         {
-            if (_controller.IsCharacterWithinAttackRange(_player, _attackRange))
+        }
+
+        public void Attack(PlayerController PlayerController)
+        {
+            if (_player == null)
             {
-                Vector2 direction = (_player.transform.position - transform.position).normalized;
-                _controller.Attack(_playerController, _cooldown, _damage, direction, _shakeDuration, _shakeIntensity);
+                _player = GameObject.FindWithTag("Player");
             }
+            if(_playerController == null)
+            {
+                _playerController = _player.GetComponent<PlayerController>();
+            }
+            if(_controller == null)
+            {
+                _controller = GetComponent<EnemyController>();
+            }
+            Vector2 direction = (_player.transform.position - transform.position).normalized;
+            _controller.Attack(_playerController, _cooldown, _damage, direction, _shakeDuration, _shakeIntensity);
         }
     }
 }

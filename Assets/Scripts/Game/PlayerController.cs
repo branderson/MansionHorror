@@ -6,6 +6,7 @@ using System.Linq;
 using Assets.Game.Lenses;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Assets.Game
 {
@@ -37,6 +38,10 @@ namespace Assets.Game
         //private Collider2D[] _colliders;
         private List<Collider2D> _enemyColliders;
 
+        // UI Management
+        private GameObject _sanityBar;
+        private GameObject _currentLens;
+
         public Lens ActiveLens
         {
             get { return _activeLens; }
@@ -67,6 +72,12 @@ namespace Assets.Game
             }
         }
 
+        private void Start() {
+            _sanityBar = GameObject.Find("SanityBar");
+            _currentLens = GameObject.Find("CurrentLens");
+
+        }
+
         private void SceneLoaded(Scene scene, LoadSceneMode mode)
         {
             transform.position = _currentCheckpoint;
@@ -80,6 +91,7 @@ namespace Assets.Game
             {
                 Interact();
             }
+            _sanityBar.SendMessage("UpdateSanityBar", _currentSanity);
             HandleSanity();
         }
 
@@ -245,7 +257,7 @@ namespace Assets.Game
             set
             {
                 _currentSanity = Mathf.Max(_maxSanity, value * _maxSanity);
-                if(_currentSanity <= 0)
+                if (_currentSanity <= 0)
                 {
                     TurnInsane();
                 }
