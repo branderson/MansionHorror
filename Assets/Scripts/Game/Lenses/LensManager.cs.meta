@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f9cee305a6e38e14fb31ab328609126e
+timeCreated: 1480752541
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - _noLensPrefab: {fileID: 1679743228608992, guid: 9346f7fff4dc4d345998ef1a871647df,
+      type: 2}
+  - _lens1Prefab: {instanceID: 0}
+  - _lens2Prefab: {instanceID: 0}
+  - _lens3Prefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
