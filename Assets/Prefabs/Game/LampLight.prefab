@@ -35,10 +35,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4004613529992982}
   - component: {fileID: 212097580497824248}
-  - component: {fileID: 114484149464227838}
-  - component: {fileID: 114280625820567058}
-  - component: {fileID: 50835664358782206}
-  - component: {fileID: 61635509230448198}
+  - component: {fileID: 114928217829769038}
+  - component: {fileID: 114785860273835798}
+  - component: {fileID: 58496001011422912}
   m_Layer: 0
   m_Name: Active
   m_TagString: Untagged
@@ -56,7 +55,7 @@ GameObject:
   - component: {fileID: 4531956519775392}
   - component: {fileID: 114476884516608408}
   m_Layer: 0
-  m_Name: Bust
+  m_Name: LampLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,7 +139,7 @@ Transform:
   m_GameObject: {fileID: 1168151278689458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 4864421338684502}
   - {fileID: 4004613529992982}
@@ -161,28 +160,8 @@ Transform:
   m_Father: {fileID: 4531956519775392}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50835664358782206
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1149180439263380}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &61635509230448198
-BoxCollider2D:
+--- !u!58 &58496001011422912
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -194,20 +173,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
---- !u!114 &114280625820567058
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1149180439263380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7704d9048504fdd4dba489e165e7cc71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _patrolPoints: []
-  _patrolSpeed: 1
+  m_Radius: 0.09
 --- !u!114 &114476884516608408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,7 +190,7 @@ MonoBehaviour:
   _active: {fileID: 4004613529992982}
   _debugOn: 0
   ai_enabled: 0
---- !u!114 &114484149464227838
+--- !u!114 &114785860273835798
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -232,15 +198,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1149180439263380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de71f587684ba54695d755c8276a346, type: 3}
+  m_Script: {fileID: 11500000, guid: 480ccfc69eca42d48bdb6990cae0b999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _armors: []
-  _damage: 0.2
-  _sirenRange: 3
-  _cooldown: 5
-  _shakeDuration: 2
-  _shakeIntensity: 0.5
+  _lamp: {fileID: 0}
+  _speed: 0.5
+  _lampRange: 5
+--- !u!114 &114928217829769038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1149180439263380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a253224f353b504a9fd3a517f95da67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _patrolPoints: []
+  _patrolSpeed: 1
 --- !u!212 &212097580497824248
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -272,7 +248,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300008, guid: 41c064eab11ca77499136e05e6b3bbad, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 0.90628797, g: 1, b: 0.029411793, a: 0.778}
   m_FlipX: 0
   m_FlipY: 0

@@ -18,7 +18,9 @@ namespace Assets.Game
         protected CameraController Camera;
         protected float _moveSpeed = 0f;
         protected bool _return = false;
-        
+        protected bool _swayPatrolUp = false;
+        protected bool _swayPatrolDown = true;
+
         public virtual void Awake()
         {
             _startPosition = transform.position;
@@ -97,11 +99,28 @@ namespace Assets.Game
         public virtual void StopPatrol()
         {
             _patrolling = false;
+            _swayPatrolUp = false;
+            _swayPatrolDown = false;
         }
 
         public virtual void StartPatrol()
         {
             _patrolling = true;
+        }
+
+        public virtual void StartSwayPatrol()
+        {
+            _patrolling = true;
+            if (_currentPatrolPoint == 0)
+            {
+                _swayPatrolUp = true;
+                _swayPatrolDown = false;
+            }
+            else
+            {
+                _swayPatrolDown = true;
+                _swayPatrolUp = false;
+            }
         }
 
         public virtual void ReturnToStartPosition()
@@ -155,11 +174,30 @@ namespace Assets.Game
             // Movement
             if (_patrolling)
             {
-                if (_patrolPoints.Capacity != 0)
+                if (_patrolPoints.Count != 0)
                 {
                     if (MoveTowardsPosition(_patrolPoints[_currentPatrolPoint], _patrolSpeed))
                     {
-                        _currentPatrolPoint = (_currentPatrolPoint + 1) % _patrolPoints.Capacity;
+                        if (_swayPatrolUp || _swayPatrolDown)
+                        {
+                            _currentPatrolPoint = _swayPatrolUp ? _currentPatrolPoint + 1 : _currentPatrolPoint - 1;
+                            if(_currentPatrolPoint >= _patrolPoints.Count)
+                            {
+                                _currentPatrolPoint--;
+                                _swayPatrolUp = false;
+                                _swayPatrolDown = true;
+                            }
+                            else if (_currentPatrolPoint < 0)
+                            {
+                                _currentPatrolPoint++;
+                                _swayPatrolUp = true;
+                                _swayPatrolDown = false;
+                            }
+                        }
+                        else
+                        {
+                            _currentPatrolPoint = (_currentPatrolPoint + 1) % _patrolPoints.Capacity;
+                        }
                     }
                 }
             }
