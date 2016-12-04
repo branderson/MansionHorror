@@ -18,6 +18,7 @@ namespace Assets.Game
         [SerializeField] private float _moveSpeed = 1f;
         [SerializeField] private float _maxSanity = 100f;
         [SerializeField] private float _sanityDeteriorateRate = 2f;
+        [SerializeField] protected float _knockbackSpeed = 40;
 
         [SerializeField] private bool _unlockAllLenses = false;
 
@@ -114,7 +115,7 @@ namespace Assets.Game
             Vector2 move = new Vector2(hor, ver) * _moveSpeed;
             if (_knockback)
             {
-                move = _knockbackDirection;
+                move = _knockbackDirection * _knockbackSpeed;
                 _knockback = false;
             }
 

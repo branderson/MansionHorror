@@ -291,7 +291,7 @@ namespace Assets.Game
             if (!_onCooldown)
             {
                 //Attack animation
-                Player.Hit(Damage, 40 * ShakeDirection);
+                Player.Hit(Damage, ShakeDirection);
                 if(Camera == null)
                 {
                     Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>();
