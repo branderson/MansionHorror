@@ -9,6 +9,7 @@ namespace Assets.Game.Lenses
         [SerializeField] private GameObject _lens1Prefab;
         [SerializeField] private GameObject _lens2Prefab;
         [SerializeField] private GameObject _lens3Prefab;
+        [SerializeField] private GameObject _lens4Prefab;
 
         protected LensManager() { }
 
@@ -37,6 +38,9 @@ namespace Assets.Game.Lenses
                     break;
                 case Lens.Lens3:
                     instance = Instantiate(_lens3Prefab);
+                    break;
+                case Lens.Lens4:
+                    instance = Instantiate(_lens4Prefab);
                     break;
             }
 

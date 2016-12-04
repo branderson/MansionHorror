@@ -14,7 +14,7 @@ namespace Assets.Game
         private bool _deactivating = false;
         private float _deactivateTime = 0f;
         public bool ai_enabled = false;
-
+        private bool _isActive = false;
 
         private void Awake()
         {
@@ -39,12 +39,23 @@ namespace Assets.Game
                     Deactivate();
                 }
             }
+            if (_isActive)
+            {
+                transform.position += _active.localPosition;
+                _active.localPosition = new Vector3();
+            }
+            else
+            {
+                transform.position += _dormant.localPosition;
+                _dormant.localPosition = new Vector3();
+            }
         }
 
         private void Activate()
         {
             _dormant.gameObject.SetActive(false);
             _active.gameObject.SetActive(true);
+            _isActive = true;
         }
 
         private void TriggerDeactivate()
@@ -57,6 +68,7 @@ namespace Assets.Game
         {
             _dormant.gameObject.SetActive(true);
             _active.gameObject.SetActive(false);
+            _isActive = false;
         }
 
         private void OnDestroy()

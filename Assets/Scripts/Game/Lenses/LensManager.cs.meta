@@ -1,15 +1,20 @@
 fileFormatVersion: 2
 guid: f9cee305a6e38e14fb31ab328609126e
-timeCreated: 1480752541
+timeCreated: 1480812501
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - _noLensPrefab: {fileID: 1679743228608992, guid: 9346f7fff4dc4d345998ef1a871647df,
       type: 2}
-  - _lens1Prefab: {instanceID: 0}
-  - _lens2Prefab: {instanceID: 0}
-  - _lens3Prefab: {instanceID: 0}
+  - _lens1Prefab: {fileID: 1277802536486552, guid: 3cd172acfb8b81c4d92f8382079964d4,
+      type: 2}
+  - _lens2Prefab: {fileID: 1306331569491566, guid: fd85d5f4ec004c14eaa9d13c0f196cb8,
+      type: 2}
+  - _lens3Prefab: {fileID: 1026777205552510, guid: 7bee395db1098b040b79776ab82e43e9,
+      type: 2}
+  - _lens4Prefab: {fileID: 1291006405156686, guid: e6a124f694aa86c4bbb2c3d7b6bc2f31,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

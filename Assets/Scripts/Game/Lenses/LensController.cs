@@ -10,6 +10,7 @@ namespace Assets.Game.Lenses
         Lens1,
         Lens2, 
         Lens3,
+        Lens4,
     }
 
     /// <summary>

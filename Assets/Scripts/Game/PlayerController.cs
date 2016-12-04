@@ -11,10 +11,14 @@ namespace Assets.Game
 {
     public class PlayerController : CustomMonoBehaviour
     {
+        [SerializeField] private Sprite FacingSprite;
+        [SerializeField] private Sprite AwaySprite;
         [SerializeField] private Transform _lensTransform;
         [SerializeField] private float _moveSpeed = 1f;
         [SerializeField] private float _maxSanity = 100f;
         [SerializeField] private float _sanityDeteriorateRate = 2f;
+
+        [SerializeField] private bool _unlockAllLenses = false;
 
         // Checkpoints
         private Vector3 _currentCheckpoint;
@@ -28,7 +32,8 @@ namespace Assets.Game
         private float _currentSanity;
 
         // Components
-         private Rigidbody2D _rigidbody;
+        private Rigidbody2D _rigidbody;
+        private SpriteRenderer _renderer;
         //private Collider2D[] _colliders;
         private List<Collider2D> _enemyColliders;
 
@@ -49,9 +54,17 @@ namespace Assets.Game
             _currentSanity = _maxSanity;
             AcquireLens(Lens.NoLens);
             _rigidbody = GetComponent<Rigidbody2D>();
+            _renderer = GetComponentInChildren<SpriteRenderer>();
             _enemyColliders = new List<Collider2D>();
             _currentCheckpoint = transform.position;
             SceneManager.sceneLoaded += SceneLoaded;
+            if (_unlockAllLenses)
+            {
+                AcquireLens(Lens.Lens1);
+                AcquireLens(Lens.Lens2);
+                AcquireLens(Lens.Lens3);
+                AcquireLens(Lens.Lens4);
+            }
         }
 
         private void SceneLoaded(Scene scene, LoadSceneMode mode)
@@ -74,6 +87,14 @@ namespace Assets.Game
         {
             float hor = Input.GetAxis("Horizontal");
             float ver = Input.GetAxis("Vertical");
+            if (ver > 0)
+            {
+                _renderer.sprite = AwaySprite;
+            }
+            else if (ver < 0)
+            {
+                _renderer.sprite = FacingSprite;
+            }
             Vector2 move = new Vector2(hor, ver) * _moveSpeed;
 
             _rigidbody.velocity = move;
