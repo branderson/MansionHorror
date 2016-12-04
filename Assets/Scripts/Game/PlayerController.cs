@@ -32,6 +32,10 @@ namespace Assets.Game
         // Sanity
         private float _currentSanity;
 
+        // Knockback
+        private bool _knockback;
+        private Vector2 _knockbackDirection;
+
         // Components
         private Rigidbody2D _rigidbody;
         private SpriteRenderer _renderer;
@@ -108,6 +112,11 @@ namespace Assets.Game
                 _renderer.sprite = FacingSprite;
             }
             Vector2 move = new Vector2(hor, ver) * _moveSpeed;
+            if (_knockback)
+            {
+                move = _knockbackDirection;
+                _knockback = false;
+            }
 
             _rigidbody.velocity = move;
         }
@@ -272,9 +281,12 @@ namespace Assets.Game
         /// <param name="sanityDamage">
         /// Percent of sanity to drain. 0.5 = 50%
         /// </param>
-        public void Hit(float sanityDamage)
+        public void Hit(float sanityDamage, Vector2 knockbackDirection)
         {
             _currentSanity -= sanityDamage * _maxSanity;
+            _knockback = true;
+            _knockbackDirection = knockbackDirection;
+
             if (_currentSanity <= 0)
             {
                 TurnInsane();
