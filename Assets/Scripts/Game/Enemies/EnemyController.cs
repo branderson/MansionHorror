@@ -26,6 +26,7 @@ namespace Assets.Game
             _startPosition = transform.position;
             _destination = _startPosition;
             Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>();
+            _onCooldown = false;
         }
 
         /// <summary>
@@ -133,6 +134,11 @@ namespace Assets.Game
             _move = true;
             _destination = _startPosition;
             _moveSpeed = Speed;
+        }
+
+        public virtual void ReturnToPatrol()
+        {
+            ReturnToPatrol(_patrolPoints[_currentPatrolPoint], _patrolSpeed);
         }
 
         public virtual void ReturnToPatrol(Vector2 Location)
@@ -286,6 +292,10 @@ namespace Assets.Game
             {
                 //Attack animation
                 Player.Hit(Damage);
+                if(Camera == null)
+                {
+                    Camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>();
+                }
                 Camera.Shake(ShakeDuratioin, ShakeDirection, ShakeIntensity);
                 _onCooldown = true;
                 Invoke("RefreshAttack", Cooldown);

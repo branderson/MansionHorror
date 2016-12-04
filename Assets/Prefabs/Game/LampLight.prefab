@@ -169,7 +169,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActiveLens: 
+  _transitionTime: 0
   _dormant: {fileID: 4864421338684502}
   _active: {fileID: 4004613529992982}
   _debugOn: 0
@@ -202,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lamp: {fileID: 0}
-  _speed: 0.5
+  _speed: 1
   _lampRange: 5
 --- !u!114 &114928217829769038
 MonoBehaviour:
@@ -216,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _patrolPoints: []
-  _patrolSpeed: 1
+  _patrolSpeed: 0.5
 --- !u!212 &212097580497824248
 SpriteRenderer:
   m_ObjectHideFlags: 1

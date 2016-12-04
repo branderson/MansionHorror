@@ -31,15 +31,16 @@ namespace Assets.AI
         {
             if (_playerEntered)
             {
-                _controller.MoveTowardsCharacter(_playerController.gameObject, _speed);
-                if ((_playerController.transform.position - transform.position).sqrMagnitude > (_lampRange * _lampRange))
+                _controller.MoveTowardsCharacter(_playerController.gameObject, 0,_speed);
+                if ((_lamp.transform.position - transform.position).sqrMagnitude > (_lampRange * _lampRange))
                 {
                     _playerEntered = false;
+                    _controller.ReturnToPatrol();
                 }
             }   
         }
 
-        void OnTriggerEnter2D(Collider2D other)
+        void OnTriggerStay2D(Collider2D other)
         {
             GameObject actor = other.gameObject;
             actor = actor.transform.parent.gameObject;

@@ -36,7 +36,6 @@ namespace Assets.Game
                     _shakeDuration = 0;
                     _shaking = false;
                 }
-                return;
             }
             float moveDistance = SquaredDistance2(_follow.transform.position) - _bufferDistanceSquared;
             if (moveDistance > 0)
@@ -46,7 +45,6 @@ namespace Assets.Game
                     transform.position.y + moveDistance * moveDirection.y, 
                     transform.position.z);
             }
-
             transform.position = Vector3.SmoothDamp(transform.position, _goalPos, ref _velocity, _speed);
         }
 
