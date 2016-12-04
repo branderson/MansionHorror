@@ -19,7 +19,7 @@ public class SanityBar : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        _bar = GameObject.Find("Image");
+        _bar = GameObject.Find("SanityBarImage");
         _rect = _bar.GetComponent<RectTransform>();
     }
 	

@@ -16,6 +16,12 @@ public class CurrentLens : MonoBehaviour {
 	}
 
     public void DisplayLens(int idx) {
+        if (idx < 0) {
+            idx = _lens_images.Length - 1;
+        }
+        if (idx > _lens_images.Length - 1) {
+            idx = 0;
+        }
         _current_lens = idx;
         _lens_image.sprite = _lens_images[idx];
     }
