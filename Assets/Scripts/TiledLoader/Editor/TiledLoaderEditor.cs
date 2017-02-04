@@ -7,7 +7,7 @@ namespace TiledLoader.Editor
         [MenuItem("Window/TiledLoader")]
         public static void OpenWindow()
         {
-            //TiledLoaderWindow.OpenWindow();
+            TiledLoaderWindow.OpenWindow();
         }
     }
 }

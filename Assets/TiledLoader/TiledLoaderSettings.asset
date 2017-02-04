@@ -26,7 +26,7 @@ MonoBehaviour:
   ScaleXProperty: ScaleX
   ScaleYProperty: ScaleY
   ScaleZProperty: ScaleZ
-  CombineProperty: Combine
+  CombineProperty: Combined
   StaticProperty: Static
   LayerProperty: Layer
   DefaultImportStatic: 0
