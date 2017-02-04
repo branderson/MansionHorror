@@ -73,8 +73,11 @@ namespace Assets.Game
 
         private void OnDestroy()
         {
-            EventManager.Instance.StopListening("Activate " + ActiveLens, Activate);
-            EventManager.Instance.StopListening("Deactivate " + ActiveLens, TriggerDeactivate);
+            if (!EventManager.Destroyed)
+            {
+                EventManager.Instance.StopListening("Activate " + ActiveLens, Activate);
+                EventManager.Instance.StopListening("Deactivate " + ActiveLens, TriggerDeactivate);
+            }
         }
     }
 }

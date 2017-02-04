@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="100" tilewidth="128" tileheight="128" nextobjectid="6">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="100" tilewidth="128" tileheight="128" nextobjectid="155">
  <tileset firstgid="1" name="Mansion" tilewidth="128" tileheight="128" tilecount="400" columns="20">
   <image source="Tileset.png" width="2560" height="2560"/>
   <tile id="0">
@@ -539,9 +539,696 @@
   </tile>
  </tileset>
  <layer name="RoomLayout" width="200" height="100">
+  <properties>
+   <property name="Combine" type="bool" value="true"/>
+  </properties>
   <data encoding="base64" compression="zlib">
    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
   </data>
  </layer>
- <objectgroup name="RoomBoundaries"/>
+ <objectgroup name="RoomBoundaries">
+  <properties>
+   <property name="Room" type="int" value="1"/>
+  </properties>
+  <object id="8" name="Room" x="11472" y="10928" width="2816" height="1856">
+   <properties>
+    <property name="Room" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="9" name="Room" x="11464" y="7760" width="880" height="3064">
+   <properties>
+    <property name="Room" type="int" value="12"/>
+   </properties>
+  </object>
+  <object id="10" name="Room" x="12472" y="7760" width="760" height="3040">
+   <properties>
+    <property name="Room" type="int" value="11"/>
+   </properties>
+  </object>
+  <object id="11" name="Room" x="10160" y="11720" width="1144" height="1040">
+   <properties>
+    <property name="Room" type="int" value="44"/>
+   </properties>
+  </object>
+  <object id="12" name="Room" x="10160" y="9928" width="1168" height="1000">
+   <properties>
+    <property name="Room" type="int" value="43"/>
+   </properties>
+  </object>
+  <object id="13" name="Room" x="8888" y="9920" width="1160" height="1032">
+   <properties>
+    <property name="Room" type="int" value="42"/>
+   </properties>
+  </object>
+  <object id="14" name="Room" x="7624" y="9920" width="1136" height="1032">
+   <properties>
+    <property name="Room" type="int" value="39"/>
+   </properties>
+  </object>
+  <object id="15" name="Room" x="6336" y="9928" width="1120" height="1016">
+   <properties>
+    <property name="Room" type="int" value="37"/>
+   </properties>
+  </object>
+  <object id="16" name="Room" x="7600" y="11704" width="1160" height="1064">
+   <properties>
+    <property name="Room" type="int" value="40"/>
+   </properties>
+  </object>
+  <object id="17" name="Room" x="8896" y="11688" width="1192" height="1016">
+   <properties>
+    <property name="Room" type="int" value="41"/>
+   </properties>
+  </object>
+  <object id="18" name="Room" x="6352" y="11696" width="1128" height="1032">
+   <properties>
+    <property name="Room" type="int" value="38"/>
+   </properties>
+  </object>
+  <object id="19" name="Room" x="4792" y="9896" width="1416" height="2824">
+   <properties>
+    <property name="Room" type="int" value="35"/>
+   </properties>
+  </object>
+  <object id="20" name="Room" x="6264" y="11008" width="5080" height="608">
+   <properties>
+    <property name="Room" type="int" value="73"/>
+   </properties>
+  </object>
+  <object id="21" name="Room" x="3840" y="8344" width="904" height="1512">
+   <properties>
+    <property name="Room" type="int" value="34"/>
+   </properties>
+  </object>
+  <object id="22" name="Room" x="3904" y="9936" width="840" height="2816">
+   <properties>
+    <property name="Room" type="int" value="67"/>
+   </properties>
+  </object>
+  <object id="27" name="Room" x="2672" y="12152" width="2072" height="616">
+   <properties>
+    <property name="Room" type="int" value="67"/>
+   </properties>
+  </object>
+  <object id="30" name="Room" x="1712" y="10416" width="2088" height="1696">
+   <properties>
+    <property name="Room" type="int" value="33"/>
+   </properties>
+  </object>
+  <object id="31" name="Room" x="1712" y="11912" width="944" height="832">
+   <properties>
+    <property name="Room" type="int" value="33"/>
+   </properties>
+  </object>
+  <object id="32" name="Room" x="952" y="9288" width="1928" height="1056">
+   <properties>
+    <property name="Room" type="int" value="32"/>
+   </properties>
+  </object>
+  <object id="33" name="Room" x="2992" y="7328" width="840" height="3016">
+   <properties>
+    <property name="Room" type="int" value="68"/>
+   </properties>
+  </object>
+  <object id="34" name="Room" x="936" y="7304" width="2888" height="752">
+   <properties>
+    <property name="Room" type="int" value="68"/>
+   </properties>
+  </object>
+  <object id="35" name="Room" x="1064" y="8112" width="1808" height="1056">
+   <properties>
+    <property name="Room" type="int" value="31"/>
+   </properties>
+  </object>
+  <object id="36" name="Room" x="928" y="10376" width="744" height="2360">
+   <properties>
+    <property name="Room" type="int" value="69"/>
+   </properties>
+  </object>
+  <object id="38" name="Room" x="128" y="12272" width="1528" height="504">
+   <properties>
+    <property name="Room" type="int" value="69"/>
+   </properties>
+  </object>
+  <object id="39" name="Room" x="56" y="9256" width="696" height="3144">
+   <properties>
+    <property name="Room" type="int" value="69"/>
+   </properties>
+  </object>
+  <object id="40" name="Room" x="64" y="8096" width="936" height="1072">
+   <properties>
+    <property name="Room" type="int" value="30"/>
+   </properties>
+  </object>
+  <object id="41" name="Room" x="56" y="6432" width="816" height="1688">
+   <properties>
+    <property name="Room" type="int" value="30"/>
+   </properties>
+  </object>
+  <object id="42" name="Room" x="40" y="5504" width="1824" height="872">
+   <properties>
+    <property name="Room" type="int" value="25"/>
+   </properties>
+  </object>
+  <object id="43" name="Room" x="1152" y="4760" width="1720" height="728">
+   <properties>
+    <property name="Room" type="int" value="25"/>
+   </properties>
+  </object>
+  <object id="44" name="Room" x="2872" y="4480" width="1056" height="992">
+   <properties>
+    <property name="Room" type="int" value="25"/>
+   </properties>
+  </object>
+  <object id="45" name="Room" x="2856" y="2600" width="696" height="2152">
+   <properties>
+    <property name="Room" type="int" value="25"/>
+   </properties>
+  </object>
+  <object id="46" name="Room" x="896" y="2592" width="2656" height="704">
+   <properties>
+    <property name="Room" type="int" value="25"/>
+   </properties>
+  </object>
+  <object id="47" name="Room" x="880" y="3368" width="1912" height="976">
+   <properties>
+    <property name="Room" type="int" value="26"/>
+   </properties>
+  </object>
+  <object id="48" name="Room" x="1144" y="4248" width="1672" height="488">
+   <properties>
+    <property name="Room" type="int" value="21"/>
+   </properties>
+  </object>
+  <object id="49" name="Room" x="48" y="4416" width="1056" height="1024">
+   <properties>
+    <property name="Room" type="int" value="28"/>
+   </properties>
+  </object>
+  <object id="50" name="Room" x="64" y="2376" width="760" height="1936">
+   <properties>
+    <property name="Room" type="int" value="27"/>
+   </properties>
+  </object>
+  <object id="51" name="Room" x="48" y="8" width="824" height="2280">
+   <properties>
+    <property name="Room" type="int" value="16"/>
+   </properties>
+  </object>
+  <object id="52" name="Room" x="64" y="8" width="5344" height="864">
+   <properties>
+    <property name="Room" type="int" value="16"/>
+   </properties>
+  </object>
+  <object id="53" name="Room" x="5328" y="0" width="4400" height="880">
+   <properties>
+    <property name="Room" type="int" value="16"/>
+   </properties>
+  </object>
+  <object id="54" name="Room" x="9688" y="8" width="4632" height="872">
+   <properties>
+    <property name="Room" type="int" value="16"/>
+   </properties>
+  </object>
+  <object id="55" name="Room" x="14280" y="8" width="4104" height="864">
+   <properties>
+    <property name="Room" type="int" value="16"/>
+   </properties>
+  </object>
+  <object id="56" name="Room" x="18344" y="8" width="1216" height="1608">
+   <properties>
+    <property name="Room" type="int" value="16"/>
+   </properties>
+  </object>
+  <object id="57" name="Room" x="19576" y="24" width="1648" height="1608">
+   <properties>
+    <property name="Room" type="int" value="45"/>
+   </properties>
+  </object>
+  <object id="58" name="Room" x="21256" y="16" width="976" height="1616">
+   <properties>
+    <property name="Room" type="int" value="53"/>
+   </properties>
+  </object>
+  <object id="59" name="Room" x="18352" y="1736" width="2192" height="1432">
+   <properties>
+    <property name="Room" type="int" value="46"/>
+   </properties>
+  </object>
+  <object id="60" name="Room" x="20584" y="1688" width="912" height="1496">
+   <properties>
+    <property name="Room" type="int" value="54"/>
+   </properties>
+  </object>
+  <object id="62" name="Room" x="20592" y="1696" width="2584" height="576">
+   <properties>
+    <property name="Room" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="63" name="Room" x="22272" y="24" width="904" height="2248">
+   <properties>
+    <property name="Room" type="int" value="54"/>
+   </properties>
+  </object>
+  <object id="64" name="Room" x="22272" y="24" width="3312" height="608">
+   <properties>
+    <property name="Room" type="int" value="54"/>
+   </properties>
+  </object>
+  <object id="65" name="Room" x="23208" y="672" width="1560" height="2480">
+   <properties>
+    <property name="Room" type="int" value="56"/>
+   </properties>
+  </object>
+  <object id="66" name="Room" x="25008" y="688" width="552" height="3744">
+   <properties>
+    <property name="Room" type="int" value="57"/>
+   </properties>
+  </object>
+  <object id="67" name="Room" x="20600" y="3216" width="4208" height="1240">
+   <properties>
+    <property name="Room" type="int" value="58"/>
+   </properties>
+  </object>
+  <object id="68" name="Room" x="22312" y="4504" width="816" height="1080">
+   <properties>
+    <property name="Room" type="int" value="58"/>
+   </properties>
+  </object>
+  <object id="69" name="Room" x="23184" y="4504" width="2376" height="1112">
+   <properties>
+    <property name="Room" type="int" value="59"/>
+   </properties>
+  </object>
+  <object id="70" name="Room" x="23240" y="5704" width="1528" height="1648">
+   <properties>
+    <property name="Room" type="int" value="60"/>
+   </properties>
+  </object>
+  <object id="71" name="Room" x="24856" y="5648" width="712" height="2520">
+   <properties>
+    <property name="Room" type="int" value="71"/>
+   </properties>
+  </object>
+  <object id="72" name="Room" x="23216" y="7424" width="2352" height="744">
+   <properties>
+    <property name="Room" type="int" value="71"/>
+   </properties>
+  </object>
+  <object id="73" name="Room" x="23216" y="7432" width="704" height="2928">
+   <properties>
+    <property name="Room" type="int" value="71"/>
+   </properties>
+  </object>
+  <object id="74" name="Room" x="23936" y="8200" width="880" height="880">
+   <properties>
+    <property name="Room" type="int" value="61"/>
+   </properties>
+  </object>
+  <object id="75" name="Room" x="23952" y="9120" width="1600" height="1160">
+   <properties>
+    <property name="Room" type="int" value="62"/>
+   </properties>
+  </object>
+  <object id="76" name="Room" x="24856" y="8216" width="696" height="2064">
+   <properties>
+    <property name="Room" type="int" value="62"/>
+   </properties>
+  </object>
+  <object id="77" name="Room" x="23208" y="10424" width="2320" height="2312">
+   <properties>
+    <property name="Room" type="int" value="63"/>
+   </properties>
+  </object>
+  <object id="78" name="Room" x="22472" y="11824" width="3056" height="912">
+   <properties>
+    <property name="Room" type="int" value="63"/>
+   </properties>
+  </object>
+  <object id="79" name="Room" x="19360" y="11832" width="2976" height="896">
+   <properties>
+    <property name="Room" type="int" value="64"/>
+   </properties>
+  </object>
+  <object id="80" name="Room" x="19392" y="11160" width="3784" height="600">
+   <properties>
+    <property name="Room" type="int" value="51"/>
+   </properties>
+  </object>
+  <object id="81" name="Room" x="22312" y="10368" width="864" height="1392">
+   <properties>
+    <property name="Room" type="int" value="51"/>
+   </properties>
+  </object>
+  <object id="82" name="Room" x="19392" y="10368" width="2952" height="752">
+   <properties>
+    <property name="Room" type="int" value="51"/>
+   </properties>
+  </object>
+  <object id="83" name="Room" x="19384" y="9224" width="720" height="1896">
+   <properties>
+    <property name="Room" type="int" value="51"/>
+   </properties>
+  </object>
+  <object id="84" name="Room" x="20080" y="9224" width="3088" height="640">
+   <properties>
+    <property name="Room" type="int" value="51"/>
+   </properties>
+  </object>
+  <object id="86" name="Room" x="22296" y="5648" width="856" height="4184">
+   <properties>
+    <property name="Room" type="int" value="51"/>
+   </properties>
+  </object>
+  <object id="87" name="Room" x="21264" y="5648" width="1880" height="720">
+   <properties>
+    <property name="Room" type="int" value="51"/>
+   </properties>
+  </object>
+  <object id="88" name="Room" x="19352" y="6440" width="2888" height="2744">
+   <properties>
+    <property name="Room" type="int" value="50"/>
+   </properties>
+  </object>
+  <object id="89" name="Room" x="18592" y="4520" width="3648" height="1064">
+   <properties>
+    <property name="Room" type="int" value="48"/>
+   </properties>
+  </object>
+  <object id="90" name="Room" x="20264" y="5440" width="984" height="896">
+   <properties>
+    <property name="Room" type="int" value="48"/>
+   </properties>
+  </object>
+  <object id="91" name="Room" x="18360" y="3256" width="2176" height="672">
+   <properties>
+    <property name="Room" type="int" value="47"/>
+   </properties>
+  </object>
+  <object id="92" name="Room" x="18608" y="3816" width="1984" height="592">
+   <properties>
+    <property name="Room" type="int" value="47"/>
+   </properties>
+  </object>
+  <object id="93" name="Room" x="17168" y="4008" width="1352" height="1856">
+   <properties>
+    <property name="Room" type="int" value="14"/>
+   </properties>
+  </object>
+  <object id="94" name="Room" x="13992" y="4008" width="3104" height="1832">
+   <properties>
+    <property name="Room" type="int" value="13"/>
+   </properties>
+  </object>
+  <object id="95" name="Room" x="13360" y="6696" width="2584" height="952">
+   <properties>
+    <property name="Room" type="int" value="8"/>
+   </properties>
+  </object>
+  <object id="96" name="Room" x="16016" y="5936" width="1104" height="1696">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="97" name="Room" x="17192" y="5936" width="1288" height="1680">
+   <properties>
+    <property name="Room" type="int" value="6"/>
+   </properties>
+  </object>
+  <object id="98" name="Room" x="18584" y="5648" width="720" height="1872">
+   <properties>
+    <property name="Room" type="int" value="49"/>
+   </properties>
+  </object>
+  <object id="99" name="Room" x="18584" y="5648" width="1608" height="720">
+   <properties>
+    <property name="Room" type="int" value="49"/>
+   </properties>
+  </object>
+  <object id="100" name="Room" x="12432" y="5912" width="840" height="1680">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="101" name="Room" x="12432" y="5912" width="4672" height="808">
+   <properties>
+    <property name="Room" type="int" value="9"/>
+   </properties>
+  </object>
+  <object id="102" name="Room" x="11432" y="5952" width="936" height="1672">
+   <properties>
+    <property name="Room" type="int" value="72"/>
+   </properties>
+  </object>
+  <object id="103" name="Room" x="9896" y="6320" width="2448" height="800">
+   <properties>
+    <property name="Room" type="int" value="72"/>
+   </properties>
+  </object>
+  <object id="104" name="Room" x="10936" y="5920" width="1408" height="1200">
+   <properties>
+    <property name="Room" type="int" value="72"/>
+   </properties>
+  </object>
+  <object id="105" name="Room" x="8240" y="8120" width="2136" height="1616">
+   <properties>
+    <property name="Room" type="int" value="36"/>
+   </properties>
+  </object>
+  <object id="106" name="Room" x="10520" y="7192" width="864" height="2616">
+   <properties>
+    <property name="Room" type="int" value="70"/>
+   </properties>
+  </object>
+  <object id="107" name="Room" x="7232" y="7192" width="4152" height="824">
+   <properties>
+    <property name="Room" type="int" value="70"/>
+   </properties>
+  </object>
+  <object id="108" name="Room" x="7232" y="7200" width="928" height="2624">
+   <properties>
+    <property name="Room" type="int" value="70"/>
+   </properties>
+  </object>
+  <object id="109" name="Room" x="4784" y="8992" width="3360" height="784">
+   <properties>
+    <property name="Room" type="int" value="70"/>
+   </properties>
+  </object>
+  <object id="110" name="Room" x="4792" y="8384" width="2328" height="528">
+   <properties>
+    <property name="Room" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="111" name="Room" x="6560" y="7736" width="560" height="1176">
+   <properties>
+    <property name="Room" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="112" name="Room" x="3872" y="7744" width="3224" height="560">
+   <properties>
+    <property name="Room" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="113" name="Room" x="3880" y="7312" width="960" height="976">
+   <properties>
+    <property name="Room" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="114" name="Room" x="4008" y="4488" width="968" height="984">
+   <properties>
+    <property name="Room" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="115" name="Room" x="4352" y="4520" width="536" height="3184">
+   <properties>
+    <property name="Room" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="116" name="Room" x="5008" y="3080" width="864" height="2120">
+   <properties>
+    <property name="Room" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="117" name="Room" x="5016" y="3080" width="2384" height="880">
+   <properties>
+    <property name="Room" type="int" value="20"/>
+   </properties>
+  </object>
+  <object id="118" name="Room" x="5936" y="4080" width="1432" height="2992">
+   <properties>
+    <property name="Room" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="119" name="Room" x="5936" y="6336" width="2856" height="752">
+   <properties>
+    <property name="Room" type="int" value="21"/>
+   </properties>
+  </object>
+  <object id="120" name="Room" x="8832" y="6312" width="1024" height="880">
+   <properties>
+    <property name="Room" type="int" value="70"/>
+   </properties>
+  </object>
+  <object id="121" name="Room" x="7432" y="3984" width="856" height="2264">
+   <properties>
+    <property name="Room" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="123" name="Room" x="7408" y="5664" width="3448" height="552">
+   <properties>
+    <property name="Room" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="124" name="Room" x="9768" y="3976" width="1080" height="2264">
+   <properties>
+    <property name="Room" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="125" name="Room" x="7432" y="4000" width="3416" height="584">
+   <properties>
+    <property name="Room" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="126" name="Room" x="9232" y="4008" width="512" height="928">
+   <properties>
+    <property name="Room" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="127" name="Room" x="9072" y="4000" width="368" height="848">
+   <properties>
+    <property name="Room" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="128" name="Room" x="8248" y="5136" width="584" height="608">
+   <properties>
+    <property name="Room" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="129" name="Room" x="8568" y="5248" width="376" height="600">
+   <properties>
+    <property name="Room" type="int" value="22"/>
+   </properties>
+  </object>
+  <object id="130" name="Room" x="14656" y="7744" width="1280" height="2160">
+   <properties>
+    <property name="Room" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="131" name="Room" x="13344" y="10032" width="3728" height="832">
+   <properties>
+    <property name="Room" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="132" name="Room" x="13344" y="7712" width="1232" height="3152">
+   <properties>
+    <property name="Room" type="int" value="10"/>
+   </properties>
+  </object>
+  <object id="133" name="Room" x="14368" y="11824" width="1184" height="896">
+   <properties>
+    <property name="Room" type="int" value="66"/>
+   </properties>
+  </object>
+  <object id="134" name="Room" x="14384" y="10912" width="2512" height="816">
+   <properties>
+    <property name="Room" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="135" name="Room" x="15696" y="11824" width="3536" height="912">
+   <properties>
+    <property name="Room" type="int" value="65"/>
+   </properties>
+  </object>
+  <object id="136" name="Room" x="17008" y="10960" width="2256" height="784">
+   <properties>
+    <property name="Room" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="137" name="Room" x="18624" y="7552" width="640" height="4192">
+   <properties>
+    <property name="Room" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="138" name="Room" x="17152" y="8544" width="1424" height="1392">
+   <properties>
+    <property name="Room" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="139" name="Room" x="17136" y="10032" width="1376" height="768">
+   <properties>
+    <property name="Room" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="140" name="Room" x="16064" y="7728" width="1040" height="2208">
+   <properties>
+    <property name="Room" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="141" name="Room" x="16096" y="7728" width="2416" height="704">
+   <properties>
+    <property name="Room" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="142" name="Room" x="20144" y="9888" width="2976" height="432">
+   <properties>
+    <property name="Room" type="int" value="52"/>
+   </properties>
+  </object>
+  <object id="144" name="Room" x="2512" y="13360">
+   <properties>
+    <property name="Room" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="145" name="Room" x="11888" y="3632" width="1968" height="2144">
+   <properties>
+    <property name="Room" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="146" name="Room" x="7472" y="960" width="10736" height="2944">
+   <properties>
+    <property name="Room" type="int" value="15"/>
+   </properties>
+  </object>
+  <object id="147" name="Room" x="928" y="912" width="2576" height="1584">
+   <properties>
+    <property name="Room" type="int" value="17"/>
+   </properties>
+  </object>
+  <object id="148" name="Room" x="3616" y="960" width="1312" height="3440">
+   <properties>
+    <property name="Room" type="int" value="18"/>
+   </properties>
+  </object>
+  <object id="149" name="Room" x="5040" y="976" width="2240" height="1968">
+   <properties>
+    <property name="Room" type="int" value="19"/>
+   </properties>
+  </object>
+  <object id="150" name="Room" x="5032" y="5288" width="808" height="2320">
+   <properties>
+    <property name="Room" type="int" value="23"/>
+   </properties>
+  </object>
+  <object id="151" name="Room" x="5024" y="7184" width="2088" height="440">
+   <properties>
+    <property name="Room" type="int" value="23"/>
+   </properties>
+  </object>
+  <object id="152" name="Room" x="1936" y="5560" width="2368" height="1648">
+   <properties>
+    <property name="Room" type="int" value="24"/>
+   </properties>
+  </object>
+  <object id="153" name="Room" x="936" y="6464" width="912" height="752">
+   <properties>
+    <property name="Room" type="int" value="29"/>
+   </properties>
+  </object>
+  <object id="154" name="Room" x="21520" y="2344" width="1616" height="808">
+   <properties>
+    <property name="Room" type="int" value="55"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

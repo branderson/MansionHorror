@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: ad3edd33970916e43b2bed688d0cce03
-timeCreated: 1480753588
+timeCreated: 1480818171
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _roomPrefab: {fileID: 1020958287112926, guid: cbeacb2d5db3e47499a82f2cb202e2dc,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
