@@ -8,7 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -950391427, guid: f78969414d99d1645b571394c89a026a, type: 3}
+  m_Script: {fileID: -950391427, guid: 1a57b6946cd1bf147bab118c74ef2149, type: 3}
   m_Name: TiledLoaderSettings
   m_EditorClassIdentifier: 
   IDProperty: Name
@@ -18,7 +18,7 @@ MonoBehaviour:
   TiledLoaderPath: TiledLoader
   DefaultScalingFactor: 1
   ParentTilesToLayers: 1
-  ParentLayersToTiledLoader: 1
+  ParentLayersToTiledLoader: 0
   MapTiledYToUnityZ: 0
   IgnoreLayerVisible: 0
   DockWindows: 1
@@ -26,11 +26,12 @@ MonoBehaviour:
   ScaleXProperty: ScaleX
   ScaleYProperty: ScaleY
   ScaleZProperty: ScaleZ
-  CombineProperty: Combined
+  CombineProperty: Combine
   StaticProperty: Static
   LayerProperty: Layer
   DefaultImportStatic: 0
   CombineMaterial: {fileID: 0}
+  DefaultObjectPrefab: {fileID: 0}
   LayerPrefab: {fileID: 0}
   InstanceComponent: {fileID: 0}
   LayerComponent: {fileID: 0}
