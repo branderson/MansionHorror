@@ -11,5 +11,3 @@ MonoBehaviour:
   m_Script: {fileID: 1151050004, guid: b9fe6e1b32d9e0848845bb1f9c123d6f, type: 3}
   m_Name: HallSE
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 1783440105836912, guid: b31fcdb4470d73d43b8778069bb03000, type: 2}
-  TiledID: HallSE

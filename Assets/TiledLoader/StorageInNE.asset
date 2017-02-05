@@ -8,7 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1151050004, guid: b9fe6e1b32d9e0848845bb1f9c123d6f, type: 3}
+  m_Script: {fileID: 1151050004, guid: 36419619599833e41b9b2bf923197a41, type: 3}
   m_Name: StorageInNE
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1595069035884034, guid: b4c637c38fc791a48b0e54c9f8fbf2aa, type: 2}

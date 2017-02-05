@@ -8,7 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1151050004, guid: b9fe6e1b32d9e0848845bb1f9c123d6f, type: 3}
+  m_Script: {fileID: 1151050004, guid: 36419619599833e41b9b2bf923197a41, type: 3}
   m_Name: Bed1E
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1682597714500032, guid: 46324ac7d1d8cf440be0979005171bb0, type: 2}
