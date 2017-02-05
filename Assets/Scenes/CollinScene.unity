@@ -251,12 +251,23 @@ Prefab:
     - target: {fileID: 61259551568741292, guid: dd2d0a65e5dfa2842a656e4f1085140f,
         type: 2}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 50957554218411964, guid: dd2d0a65e5dfa2842a656e4f1085140f,
         type: 2}
       propertyPath: m_BodyType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114058466924675300, guid: dd2d0a65e5dfa2842a656e4f1085140f,
+        type: 2}
+      propertyPath: proj
+      value: 
+      objectReference: {fileID: 1526446116920332, guid: fd2e529a68f1de84589a7b8e0126ed45,
+        type: 2}
+    - target: {fileID: 114058466924675300, guid: dd2d0a65e5dfa2842a656e4f1085140f,
+        type: 2}
+      propertyPath: offsetFactor
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd2d0a65e5dfa2842a656e4f1085140f, type: 2}
@@ -370,6 +381,15 @@ Prefab:
     - target: {fileID: 1060821614521956, guid: 451483034c53c224ea72b8b8f4f184fb, type: 2}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836074364490374, guid: 451483034c53c224ea72b8b8f4f184fb, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 114802098913503846, guid: 451483034c53c224ea72b8b8f4f184fb,
+        type: 2}
+      propertyPath: _unlockAllLenses
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 451483034c53c224ea72b8b8f4f184fb, type: 2}

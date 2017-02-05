@@ -96,7 +96,8 @@ namespace Assets.Game
             {
                 Interact();
             }
-            _sanityBar.SendMessage("UpdateSanityBar", _currentSanity);
+            if(_sanityBar)
+                _sanityBar.SendMessage("UpdateSanityBar", _currentSanity);
             HandleSanity();
         }
 
