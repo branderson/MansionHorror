@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4111228128267924}
   - component: {fileID: 212122207092732094}
   - component: {fileID: 61479937064441938}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: KitchenOutSW
   m_TagString: Untagged
   m_Icon: {fileID: 0}

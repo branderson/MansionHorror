@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4680992339338634}
   - component: {fileID: 212601609949328118}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HallDoorE
   m_TagString: Untagged
   m_Icon: {fileID: 0}

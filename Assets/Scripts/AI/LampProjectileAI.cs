@@ -32,6 +32,7 @@ public class LampProjectileAI : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        
         GameObject actor = other.gameObject;
         if(actor.CompareTag("Player"))
         {

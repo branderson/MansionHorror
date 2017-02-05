@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4045865438236646}
   - component: {fileID: 212655343264849932}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bed1DoorW
   m_TagString: Untagged
   m_Icon: {fileID: 0}

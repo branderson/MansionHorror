@@ -331,6 +331,22 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114484149464227838, guid: f8491775c696d224b9a18f4e28edd24d,
+        type: 2}
+      propertyPath: gargoyal
+      value: 
+      objectReference: {fileID: 1881681922698876, guid: 5f4905a5a2ef8984dac944d2149bbc4d,
+        type: 2}
+    - target: {fileID: 114484149464227838, guid: f8491775c696d224b9a18f4e28edd24d,
+        type: 2}
+      propertyPath: spawnRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114484149464227838, guid: f8491775c696d224b9a18f4e28edd24d,
+        type: 2}
+      propertyPath: spawnCooldown
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8491775c696d224b9a18f4e28edd24d, type: 2}
   m_IsPrefabParent: 0

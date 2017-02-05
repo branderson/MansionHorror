@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4273947868446132}
   - component: {fileID: 212205449706151752}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bed2DoorS
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212628236615080472}
   - component: {fileID: 61672439417045310}
   - component: {fileID: 61160217014539914}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RecInSW
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212610577362031688}
   - component: {fileID: 61995410686774990}
   - component: {fileID: 61228603978348996}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HallInNE
   m_TagString: Untagged
   m_Icon: {fileID: 0}

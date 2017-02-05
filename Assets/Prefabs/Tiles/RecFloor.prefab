@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4699480761198984}
   - component: {fileID: 212496460740767606}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RecFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

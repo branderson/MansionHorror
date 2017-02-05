@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4016994954946042}
   - component: {fileID: 212758173660047070}
   - component: {fileID: 61903587479577756}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bed1OutSE
   m_TagString: Untagged
   m_Icon: {fileID: 0}

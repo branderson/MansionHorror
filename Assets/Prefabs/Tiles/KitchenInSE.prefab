@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212480026874247724}
   - component: {fileID: 61178838259612098}
   - component: {fileID: 61238336800245392}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: KitchenInSE
   m_TagString: Untagged
   m_Icon: {fileID: 0}

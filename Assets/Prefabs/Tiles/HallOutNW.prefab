@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4045263641148076}
   - component: {fileID: 212253051536581484}
   - component: {fileID: 61858190666632270}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HallOutNW
   m_TagString: Untagged
   m_Icon: {fileID: 0}

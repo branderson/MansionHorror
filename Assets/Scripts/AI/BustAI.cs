@@ -18,20 +18,36 @@ namespace Assets.AI
         private GameObject _player;
         private PlayerController _playerController;
         private BustController _controller;
+        public GameObject gargoyal;
+        public float spawnRange;
+        public float spawnCooldown;
+        private float lastSpawn;
+        private bool canSpawn;
 
         private void Awake()
         {
             _player = GameObject.FindWithTag("Player");
             _playerController = _player.GetComponent<PlayerController>();
             _controller = GetComponent<BustController>();
+            canSpawn = true;
         }
 
         private void Update()
         {
-            if (_controller.IsCharacterWithinAttackRange(_player, _sirenRange))
+            if ((_controller.IsCharacterWithinAttackRange(_player, _sirenRange)) && canSpawn)
             {
-                Vector2 direction = (_player.transform.position - transform.position).normalized;
-                _controller.Attack(_playerController, _cooldown, _damage, direction, _shakeDuration, _shakeIntensity, _armors);
+
+                Vector2 spawn2D = Random.insideUnitCircle.normalized;
+                Vector3 spawn3D = new Vector3(spawn2D.x, spawn2D.y, 0);
+                spawn3D = spawn3D * spawnRange;
+                Vector3 spawnPoint = _player.transform.position + spawn3D;
+                Instantiate(gargoyal, spawnPoint, new Quaternion(0, 0, 0, 0));
+                lastSpawn = Time.time;
+                canSpawn = false;
+            }
+            if(Time.time-lastSpawn>spawnCooldown)
+            {
+                canSpawn = true;
             }
         }
     }

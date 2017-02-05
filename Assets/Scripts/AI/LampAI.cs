@@ -54,7 +54,7 @@ namespace Assets.AI
             }
             if (canFire) //temp code until a timing component is added
             {
-                LampProjectileAI projAI = Instantiate(proj, new Vector3(transform.position.x, transform.position.y, transform.position.z), new Quaternion(0, 0, 0, 0)).GetComponent<LampProjectileAI>();
+                LampProjectileAI projAI = Instantiate(proj, new Vector3(transform.position.x, transform.position.y, 0), new Quaternion(0, 0, 0, 0)).GetComponent<LampProjectileAI>();
                 projAI.dir = (_player.transform.position - transform.position).normalized;
                 canFire = false;
                 lastFire = Time.time;

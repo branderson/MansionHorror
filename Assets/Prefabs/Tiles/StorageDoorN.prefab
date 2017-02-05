@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4266529164088712}
   - component: {fileID: 212216226734025492}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StorageDoorN
   m_TagString: Untagged
   m_Icon: {fileID: 0}

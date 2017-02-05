@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4864421338684502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Dormant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114280625820567058}
   - component: {fileID: 50835664358782206}
   - component: {fileID: 61635509230448198}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Active
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4531956519775392}
   - component: {fileID: 114476884516608408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4420528869695570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4262584207130580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,6 +242,9 @@ MonoBehaviour:
   _cooldown: 5
   _shakeDuration: 2
   _shakeIntensity: 0.5
+  gargoyal: {fileID: 0}
+  spawnRange: 10
+  spawnCooldown: 2
 --- !u!212 &212097580497824248
 SpriteRenderer:
   m_ObjectHideFlags: 1

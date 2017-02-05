@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4708847170573476}
   - component: {fileID: 212647295645756808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: KitchenDoorE
   m_TagString: Untagged
   m_Icon: {fileID: 0}

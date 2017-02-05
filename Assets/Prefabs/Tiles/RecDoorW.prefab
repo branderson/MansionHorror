@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4886251376377014}
   - component: {fileID: 212492387180166128}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RecDoorW
   m_TagString: Untagged
   m_Icon: {fileID: 0}

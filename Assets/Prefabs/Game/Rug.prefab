@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4864421338684502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Dormant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114064521985185842}
   - component: {fileID: 50654841721876544}
   - component: {fileID: 61951425784667514}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Active
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4531956519775392}
   - component: {fileID: 114476884516608408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4420528869695570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4262584207130580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,6 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActiveLens: 
+  _transitionTime: 0
   _dormant: {fileID: 4864421338684502}
   _active: {fileID: 4004613529992982}
   _debugOn: 0

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4833823482598052}
   - component: {fileID: 212208681150949508}
   - component: {fileID: 61750363854020816}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RecOutSE
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -46,8 +46,8 @@ namespace Assets.AI
             if (actor.CompareTag("Player"))
             {
                 actor = actor.transform.parent.gameObject;
-                //Rigidbody2D prb = actor.GetComponent<Rigidbody2D>();
-                //Vector3 vel = prb.velocity.normalized;
+                Rigidbody2D prb = actor.GetComponent<Rigidbody2D>();
+                Vector3 vel = prb.velocity.normalized;
                 if (actor.tag == "Player")
                 {
                     _playerEntered = true;
