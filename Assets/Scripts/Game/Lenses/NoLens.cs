@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Assets.Game.Lenses
 {
@@ -21,6 +21,11 @@ namespace Assets.Game.Lenses
             }
             foreach (AudioSource audio in _camera.GetComponents<AudioSource>())
             {
+                if (audio.clip == null)
+                {
+                    Debug.Log("Audio clip is null");
+                    continue;
+                }
                 if (audio.clip.name == "CrazyGlasses_NormalLoop") ;
                 {
                     _audio = audio;

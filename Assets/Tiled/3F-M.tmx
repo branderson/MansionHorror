@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="100" tilewidth="128" tileheight="128" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="100" tilewidth="128" tileheight="128" nextobjectid="591">
  <tileset firstgid="1" name="Tileset1" tilewidth="128" tileheight="128" tilecount="400" columns="20">
   <image source="Tileset.png" width="2560" height="2560"/>
   <tile id="0">
@@ -538,9 +538,804 @@
    </properties>
   </tile>
  </tileset>
+ <tileset firstgid="401" name="Obj_Tileset" tilewidth="128" tileheight="128" tilecount="400" columns="20">
+  <image source="Object_Tileset.png" width="2560" height="2560"/>
+ </tileset>
  <layer name="Tile Layer 1" width="200" height="100">
+  <properties>
+   <property name="Combine" type="bool" value="true"/>
+  </properties>
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
+ <objectgroup name="Classes" visible="0"/>
+ <objectgroup name="Rugs" visible="0"/>
+ <objectgroup name="Knights" visible="0"/>
+ <objectgroup name="Lamps">
+  <object id="247" name="Lamp" gid="422" x="7736" y="11192" width="128" height="128"/>
+  <object id="248" name="Lamp" gid="422" x="9560" y="11200" width="128" height="128"/>
+  <object id="250" name="Lamp" gid="422" x="5200" y="11576" width="128" height="128"/>
+  <object id="251" name="Lamp" gid="422" x="3884" y="11720" width="128" height="128"/>
+  <object id="252" name="Lamp" gid="422" x="4448" y="11724" width="128" height="128"/>
+  <object id="253" name="Lamp" gid="422" x="10328" y="10180" width="128" height="128"/>
+  <object id="254" name="Lamp" gid="422" x="3144" y="12104" width="128" height="128"/>
+  <object id="255" name="Lamp" gid="422" x="2816" y="12112" width="128" height="128"/>
+  <object id="256" name="Lamp" gid="422" x="2436" y="12112" width="128" height="128"/>
+  <object id="258" name="Lamp" gid="422" x="2044" y="12112" width="128" height="128"/>
+  <object id="259" name="Lamp" gid="422" x="3532" y="10820" width="128" height="128"/>
+  <object id="260" name="Lamp" gid="422" x="2740" y="10808" width="128" height="128"/>
+  <object id="261" name="Lamp" gid="422" x="2388" y="10700" width="128" height="128"/>
+  <object id="262" name="Lamp" gid="422" x="1672" y="10324" width="128" height="128"/>
+  <object id="263" name="Lamp" gid="422" x="1284" y="10324" width="128" height="128"/>
+  <object id="264" name="Lamp" gid="422" x="2764" y="9552" width="128" height="128"/>
+  <object id="265" name="Lamp" gid="422" x="3460" y="9552" width="128" height="128"/>
+  <object id="266" name="Lamp" gid="422" x="3972" y="10196" width="128" height="128"/>
+  <object id="267" name="Lamp" gid="422" x="3628" y="10204" width="128" height="128"/>
+  <object id="268" name="Lamp" gid="422" x="4484" y="9808" width="128" height="128"/>
+  <object id="269" name="Lamp" gid="422" x="4840" y="9808" width="128" height="128"/>
+  <object id="270" name="Lamp" gid="422" x="3508" y="8900" width="128" height="128"/>
+  <object id="271" name="Lamp" gid="422" x="3216" y="8668" width="128" height="128"/>
+  <object id="272" name="Lamp" gid="422" x="1792" y="8660" width="128" height="128"/>
+  <object id="273" name="Lamp" gid="422" x="960" y="9444" width="128" height="128"/>
+  <object id="274" name="Lamp" gid="422" x="188" y="9424" width="128" height="128"/>
+  <object id="275" name="Lamp" gid="422" x="732" y="9172" width="128" height="128"/>
+  <object id="276" name="Lamp" gid="422" x="724" y="8788" width="128" height="128"/>
+  <object id="277" name="Lamp" gid="422" x="524" y="8004" width="128" height="128"/>
+  <object id="278" name="Lamp" gid="422" x="2744" y="7640" width="128" height="128"/>
+  <object id="279" name="Lamp" gid="422" x="2392" y="7640" width="128" height="128"/>
+  <object id="280" name="Lamp" gid="422" x="2764" y="5296" width="128" height="128"/>
+  <object id="281" name="Lamp" gid="422" x="2392" y="5956" width="128" height="128"/>
+  <object id="282" name="Lamp" gid="422" x="2368" y="4068" width="128" height="128"/>
+  <object id="283" name="Lamp" gid="422" x="3816" y="5196" width="128" height="128"/>
+  <object id="284" name="Lamp" gid="422" x="4276" y="5200" width="128" height="128"/>
+  <object id="285" name="Lamp" gid="422" x="4952" y="6216" width="128" height="128"/>
+  <object id="286" name="Lamp" gid="422" x="4656" y="6600" width="128" height="128"/>
+  <object id="287" name="Lamp" gid="422" x="6472" y="4800" width="128" height="128"/>
+  <object id="288" name="Lamp" gid="422" x="5500" y="5328" width="128" height="128"/>
+  <object id="289" name="Lamp" gid="422" x="5428" y="3768" width="128" height="128"/>
+  <object id="290" name="Lamp" gid="422" x="4596" y="3768" width="128" height="128"/>
+  <object id="291" name="Lamp" gid="422" x="3640" y="3784" width="128" height="128"/>
+  <object id="292" name="Lamp" gid="422" x="3244" y="1864" width="128" height="128"/>
+  <object id="293" name="Lamp" gid="422" x="3044" y="1860" width="128" height="128"/>
+  <object id="294" name="Lamp" gid="422" x="5740" y="1732" width="128" height="128"/>
+  <object id="295" name="Lamp" gid="422" x="5740" y="2512" width="128" height="128"/>
+  <object id="296" name="Lamp" gid="422" x="5772" y="3280" width="128" height="128"/>
+  <object id="297" name="Lamp" gid="422" x="6140" y="3288" width="128" height="128"/>
+  <object id="298" name="Lamp" gid="422" x="5884" y="6224" width="128" height="128"/>
+  <object id="299" name="Lamp" gid="422" x="7368" y="6212" width="128" height="128"/>
+  <object id="300" name="Lamp" gid="422" x="8644" y="6220" width="128" height="128"/>
+  <object id="301" name="Lamp" gid="422" x="8368" y="1980" width="128" height="128"/>
+  <object id="302" name="Lamp" gid="422" x="8184" y="1992" width="128" height="128"/>
+  <object id="303" name="Lamp" gid="422" x="10068" y="6744" width="128" height="128"/>
+  <object id="304" name="Lamp" gid="422" x="10944" y="8396" width="128" height="128"/>
+  <object id="305" name="Lamp" gid="422" x="11196" y="8392" width="128" height="128"/>
+  <object id="306" name="Lamp" gid="422" x="11864" y="5488" width="128" height="128"/>
+  <object id="307" name="Lamp" gid="422" x="12096" y="6584" width="128" height="128"/>
+  <object id="308" name="Lamp" gid="422" x="14264" y="5280" width="128" height="128"/>
+  <object id="309" name="Lamp" gid="422" x="14280" y="8232" width="128" height="128"/>
+  <object id="310" name="Lamp" gid="422" x="13892" y="8248" width="128" height="128"/>
+  <object id="311" name="Lamp" gid="422" x="13368" y="7668" width="128" height="128"/>
+  <object id="312" name="Lamp" gid="422" x="12652" y="6208" width="128" height="128"/>
+  <object id="313" name="Lamp" gid="422" x="11780" y="7112" width="128" height="128"/>
+  <object id="314" name="Lamp" gid="422" x="11732" y="8544" width="128" height="128"/>
+  <object id="315" name="Lamp" gid="422" x="12508" y="8844" width="128" height="128"/>
+  <object id="316" name="Lamp" gid="422" x="13216" y="8844" width="128" height="128"/>
+  <object id="318" name="Lamp" gid="422" x="10680" y="10192" width="128" height="128"/>
+  <object id="319" name="Lamp" gid="422" x="11440" y="10168" width="128" height="128"/>
+  <object id="320" name="Lamp" gid="422" x="13688" y="10192" width="128" height="128"/>
+  <object id="321" name="Lamp" gid="422" x="12230.3" y="10950.7" width="128" height="128"/>
+  <object id="322" name="Lamp" gid="422" x="13110.9" y="11214.3" width="128" height="128"/>
+  <object id="323" name="Lamp" gid="422" x="13481.5" y="10579.2" width="128" height="128"/>
+  <object id="324" name="Lamp" gid="422" x="13884.5" y="11730.7" width="128" height="128"/>
+  <object id="325" name="Lamp" gid="422" x="17614.8" y="11727.6" width="128" height="128"/>
+  <object id="326" name="Lamp" gid="422" x="16699.6" y="10582.2" width="128" height="128"/>
+  <object id="327" name="Lamp" gid="422" x="17993.6" y="10576.1" width="128" height="128"/>
+  <object id="328" name="Lamp" gid="422" x="17984.5" y="9112.48" width="128" height="128"/>
+  <object id="329" name="Lamp" gid="422" x="16720.8" y="9118.55" width="128" height="128"/>
+  <object id="330" name="Lamp" gid="422" x="18396.6" y="10442.8" width="128" height="128"/>
+  <object id="331" name="Lamp" gid="422" x="16299.6" y="9936.73" width="128" height="128"/>
+  <object id="332" name="Lamp" gid="422" x="20281.5" y="9548.85" width="128" height="128"/>
+  <object id="333" name="Lamp" gid="422" x="19169.3" y="9554.91" width="128" height="128"/>
+  <object id="334" name="Lamp" gid="422" x="18242.1" y="8142.79" width="128" height="128"/>
+  <object id="335" name="Lamp" gid="422" x="17584.5" y="8136.73" width="128" height="128"/>
+  <object id="336" name="Lamp" gid="422" x="16699.6" y="8124.61" width="128" height="128"/>
+  <object id="337" name="Lamp" gid="422" x="17348.1" y="8124.61" width="128" height="128"/>
+  <object id="339" name="Lamp" gid="422" x="15551.2" y="8000.36" width="128" height="128"/>
+  <object id="340" name="Lamp" gid="422" x="14917.8" y="8012.48" width="128" height="128"/>
+  <object id="341" name="Lamp" gid="422" x="15239" y="8012.48" width="128" height="128"/>
+  <object id="342" name="Lamp" gid="422" x="15581.5" y="7248.85" width="128" height="128"/>
+  <object id="343" name="Lamp" gid="422" x="15248.1" y="7230.67" width="128" height="128"/>
+  <object id="344" name="Lamp" gid="422" x="15936" y="6079.15" width="128" height="128"/>
+  <object id="345" name="Lamp" gid="422" x="15287.5" y="6073.09" width="128" height="128"/>
+  <object id="346" name="Lamp" gid="422" x="16311.8" y="6088.24" width="128" height="128"/>
+  <object id="347" name="Lamp" gid="422" x="17712" y="4788" width="128" height="128"/>
+  <object id="348" name="Lamp" gid="422" x="15564" y="4796" width="128" height="128"/>
+  <object id="349" name="Lamp" gid="422" x="15568" y="2724" width="128" height="128"/>
+  <object id="350" name="Lamp" gid="422" x="16204" y="2728" width="128" height="128"/>
+  <object id="351" name="Lamp" gid="422" x="16780" y="2740" width="128" height="128"/>
+  <object id="352" name="Lamp" gid="422" x="17296" y="2756" width="128" height="128"/>
+  <object id="353" name="Lamp" gid="422" x="17868" y="2744" width="128" height="128"/>
+  <object id="354" name="Lamp" gid="422" x="18484" y="2760" width="128" height="128"/>
+  <object id="355" name="Lamp" gid="422" x="18964" y="2764" width="128" height="128"/>
+  <object id="356" name="Lamp" gid="422" x="19124" y="3896" width="128" height="128"/>
+  <object id="357" name="Lamp" gid="422" x="18568" y="3896" width="128" height="128"/>
+  <object id="358" name="Lamp" gid="422" x="18084" y="3896" width="128" height="128"/>
+  <object id="360" name="Lamp" gid="422" x="19536" y="5176" width="128" height="128"/>
+  <object id="361" name="Lamp" gid="422" x="19528" y="4772" width="128" height="128"/>
+  <object id="362" name="Lamp" gid="422" x="20428" y="5564" width="128" height="128"/>
+  <object id="363" name="Lamp" gid="422" x="21076" y="5576" width="128" height="128"/>
+  <object id="364" name="Lamp" gid="422" x="20400" y="4544" width="128" height="128"/>
+  <object id="365" name="Lamp" gid="422" x="21064" y="4176" width="128" height="128"/>
+  <object id="366" name="Lamp" gid="422" x="19136" y="1960" width="128" height="128"/>
+  <object id="367" name="Lamp" gid="422" x="21448" y="1988" width="128" height="128"/>
+  <object id="368" name="Lamp" gid="422" x="24864" y="1520" width="128" height="128"/>
+  <object id="369" name="Lamp" gid="422" x="24904" y="11056" width="128" height="128"/>
+  <object id="370" name="Lamp" gid="422" x="21084" y="11060" width="128" height="128"/>
+  <object id="371" name="Lamp" gid="422" x="20792" y="11064" width="128" height="128"/>
+ </objectgroup>
+ <objectgroup name="Chairs">
+  <object id="372" name="Chair" gid="401" x="8324" y="10492" width="128" height="128"/>
+  <object id="373" name="Chair" gid="401" x="8324" y="10628" width="128" height="128"/>
+  <object id="374" name="Chair" gid="401" x="4624" y="11332" width="128" height="128"/>
+  <object id="375" name="Chair" gid="401" x="4232" y="11344" width="128" height="128"/>
+  <object id="376" name="Chair" gid="401" x="3852" y="11336" width="128" height="128"/>
+  <object id="377" name="Chair" gid="401" x="3340" y="10800" width="128" height="128"/>
+  <object id="378" name="Chair" gid="401" x="2632" y="12088" width="128" height="128"/>
+  <object id="379" name="Chair" gid="401" x="2244" y="12092" width="128" height="128"/>
+  <object id="380" name="Chair" gid="401" x="1920" y="12084" width="128" height="128"/>
+  <object id="381" name="Chair" gid="401" x="2996" y="12100" width="128" height="128"/>
+  <object id="382" name="Chair" gid="401" x="2540" y="11084" width="128" height="128"/>
+  <object id="383" name="Chair" gid="401" x="1664" y="9932" width="128" height="128"/>
+  <object id="384" name="Chair" gid="401" x="1292" y="9928" width="128" height="128"/>
+  <object id="385" name="Chair" gid="401" x="2376" y="9908" width="128" height="128"/>
+  <object id="386" name="Chair" gid="401" x="3084" y="9532" width="128" height="128"/>
+  <object id="387" name="Chair" gid="401" x="3452" y="9152" width="128" height="128"/>
+  <object id="388" name="Chair" gid="401" x="4308" y="8784" width="128" height="128"/>
+  <object id="389" name="Chair" gid="401" x="2192" y="8128" width="128" height="128"/>
+  <object id="390" name="Chair" gid="401" x="2564" y="8136" width="128" height="128"/>
+  <object id="391" name="Chair" gid="401" x="2972" y="8136" width="128" height="128"/>
+  <object id="392" name="Chair" gid="401" x="2984" y="8428" width="128" height="128"/>
+  <object id="393" name="Chair" gid="401" x="2568" y="8416" width="128" height="128"/>
+  <object id="394" name="Chair" gid="401" x="2200" y="8436" width="128" height="128"/>
+  <object id="395" name="Chair" gid="401" x="220" y="10788" width="128" height="128"/>
+  <object id="396" name="Chair" gid="401" x="948" y="10800" width="128" height="128"/>
+  <object id="397" name="Chair" gid="401" x="324" y="8592" width="128" height="128"/>
+  <object id="398" name="Chair" gid="401" x="900" y="8000" width="128" height="128"/>
+  <object id="399" name="Chair" gid="401" x="2392" y="3420" width="128" height="128"/>
+  <object id="400" name="Chair" gid="401" x="2768" y="5584" width="128" height="128"/>
+  <object id="401" name="Chair" gid="401" x="4876" y="3392" width="128" height="128"/>
+  <object id="402" name="Chair" gid="401" x="4436" y="3392" width="128" height="128"/>
+  <object id="403" name="Chair" gid="401" x="3152" y="1840" width="128" height="128"/>
+  <object id="404" name="Chair" gid="401" x="5080" y="844" width="128" height="128"/>
+  <object id="405" name="Chair" gid="401" x="5896" y="2304" width="128" height="128"/>
+  <object id="406" name="Chair" gid="401" x="5888" y="1532" width="128" height="128"/>
+  <object id="407" name="Chair" gid="401" x="5892" y="3072" width="128" height="128"/>
+  <object id="408" name="Chair" gid="401" x="8420" y="3552" width="128" height="128"/>
+  <object id="409" name="Chair" gid="401" x="8168" y="3544" width="128" height="128"/>
+  <object id="410" name="Chair" gid="401" x="7840" y="3544" width="128" height="128"/>
+  <object id="411" name="Chair" gid="401" x="7484" y="3540" width="128" height="128"/>
+  <object id="412" name="Chair" gid="401" x="7492" y="3860" width="128" height="128"/>
+  <object id="413" name="Chair" gid="401" x="7840" y="3860" width="128" height="128"/>
+  <object id="414" name="Chair" gid="401" x="8172" y="3868" width="128" height="128"/>
+  <object id="415" name="Chair" gid="401" x="8424" y="3860" width="128" height="128"/>
+  <object id="416" name="Chair" gid="401" x="7488" y="4212" width="128" height="128"/>
+  <object id="417" name="Chair" gid="401" x="7840" y="4224" width="128" height="128"/>
+  <object id="418" name="Chair" gid="401" x="8176" y="4228" width="128" height="128"/>
+  <object id="419" name="Chair" gid="401" x="8432" y="4236" width="128" height="128"/>
+  <object id="420" name="Chair" gid="401" x="8436" y="4544" width="128" height="128"/>
+  <object id="421" name="Chair" gid="401" x="8176" y="4552" width="128" height="128"/>
+  <object id="422" name="Chair" gid="401" x="7832" y="4548" width="128" height="128"/>
+  <object id="423" name="Chair" gid="401" x="7496" y="4556" width="128" height="128"/>
+  <object id="424" name="Chair" gid="401" x="3848" y="6160" width="128" height="128"/>
+  <object id="425" name="Chair" gid="401" x="3852" y="5960" width="128" height="128"/>
+  <object id="426" name="Chair" gid="401" x="3860" y="5772" width="128" height="128"/>
+  <object id="427" name="Chair" gid="401" x="3852" y="4608" width="128" height="128"/>
+  <object id="428" name="Chair" gid="401" x="4048" y="4604" width="128" height="128"/>
+  <object id="429" name="Chair" gid="401" x="5760" y="3824" width="128" height="128"/>
+  <object id="430" name="Chair" gid="401" x="5932" y="3820" width="128" height="128"/>
+  <object id="431" name="Chair" gid="401" x="6140" y="3820" width="128" height="128"/>
+  <object id="432" name="Chair" gid="401" x="7376" y="6544" width="128" height="128"/>
+  <object id="433" name="Chair" gid="401" x="9408" y="5848" width="128" height="128"/>
+  <object id="434" name="Chair" gid="401" x="13280" y="5216" width="128" height="128"/>
+  <object id="435" name="Chair" gid="401" x="13448" y="5224" width="128" height="128"/>
+  <object id="436" name="Chair" gid="401" x="13640" y="5224" width="128" height="128"/>
+  <object id="437" name="Chair" gid="401" x="14072" y="8248" width="128" height="128"/>
+  <object id="438" name="Chair" gid="401" x="12240" y="8728" width="128" height="128"/>
+  <object id="439" name="Chair" gid="401" x="12464" y="8592" width="128" height="128"/>
+  <object id="440" name="Chair" gid="401" x="12704" y="8728" width="128" height="128"/>
+  <object id="441" name="Chair" gid="401" x="12672" y="9064" width="128" height="128"/>
+  <object id="442" name="Chair" gid="401" x="12384" y="9080" width="128" height="128"/>
+  <object id="443" name="Chair" gid="401" x="11584" y="7288" width="128" height="128"/>
+  <object id="444" name="Chair" gid="401" x="11512" y="7016" width="128" height="128"/>
+  <object id="445" name="Chair" gid="401" x="11720" y="6856" width="128" height="128"/>
+  <object id="446" name="Chair" gid="401" x="11984" y="7000" width="128" height="128"/>
+  <object id="447" name="Chair" gid="401" x="11896" y="7312" width="128" height="128"/>
+  <object id="448" name="Chair" gid="401" x="13152" y="7712" width="128" height="128"/>
+  <object id="449" name="Chair" gid="401" x="13200" y="7456" width="128" height="128"/>
+  <object id="450" name="Chair" gid="401" x="13440" y="7432" width="128" height="128"/>
+  <object id="451" name="Chair" gid="401" x="13568" y="7640" width="128" height="128"/>
+  <object id="452" name="Chair" gid="401" x="13400" y="7888" width="128" height="128"/>
+  <object id="453" name="Chair" gid="401" x="12440" y="11152" width="128" height="128"/>
+  <object id="454" name="Chair" gid="401" x="12717.2" y="11153.3" width="128" height="128"/>
+  <object id="455" name="Chair" gid="401" x="12955.9" y="11154.2" width="128" height="128"/>
+  <object id="456" name="Chair" gid="401" x="14166.3" y="11715.5" width="128" height="128"/>
+  <object id="457" name="Chair" gid="401" x="14414.8" y="11709.5" width="128" height="128"/>
+  <object id="458" name="Chair" gid="401" x="14672.4" y="11709.5" width="128" height="128"/>
+  <object id="459" name="Chair" gid="401" x="17445.1" y="11700.4" width="128" height="128"/>
+  <object id="460" name="Chair" gid="401" x="17181.5" y="11700.4" width="128" height="128"/>
+  <object id="461" name="Chair" gid="401" x="16872.4" y="11697.3" width="128" height="128"/>
+  <object id="462" name="Chair" gid="401" x="17090.5" y="10161" width="128" height="128"/>
+  <object id="463" name="Chair" gid="401" x="17096.6" y="9806.42" width="128" height="128"/>
+  <object id="464" name="Chair" gid="401" x="17602.7" y="9809.45" width="128" height="128"/>
+  <object id="465" name="Chair" gid="401" x="17599.6" y="10154.9" width="128" height="128"/>
+  <object id="466" name="Chair" gid="401" x="17614.8" y="9397.33" width="128" height="128"/>
+  <object id="467" name="Chair" gid="401" x="17090.5" y="9406.42" width="128" height="128"/>
+  <object id="468" name="Chair" gid="401" x="16317.8" y="9415.52" width="128" height="128"/>
+  <object id="469" name="Chair" gid="401" x="14924" y="7740" width="128" height="128"/>
+  <object id="470" name="Chair" gid="401" x="15556" y="7752" width="128" height="128"/>
+  <object id="471" name="Chair" gid="401" x="16716" y="7864" width="128" height="128"/>
+  <object id="472" name="Chair" gid="401" x="17060" y="8112" width="128" height="128"/>
+  <object id="473" name="Chair" gid="401" x="14920" y="6960" width="128" height="128"/>
+  <object id="474" name="Chair" gid="401" x="15564" y="6964" width="128" height="128"/>
+  <object id="475" name="Chair" gid="401" x="15932" y="5620" width="128" height="128"/>
+  <object id="476" name="Chair" gid="401" x="15628" y="6060" width="128" height="128"/>
+  <object id="477" name="Chair" gid="401" x="16312" y="5604" width="128" height="128"/>
+  <object id="478" name="Chair" gid="401" x="16964" y="5600" width="128" height="128"/>
+  <object id="479" name="Chair" gid="401" x="15916" y="3196" width="128" height="128"/>
+  <object id="480" name="Chair" gid="401" x="16264" y="3204" width="128" height="128"/>
+  <object id="481" name="Chair" gid="401" x="16620" y="3200" width="128" height="128"/>
+  <object id="482" name="Chair" gid="401" x="17024" y="3204" width="128" height="128"/>
+  <object id="483" name="Chair" gid="401" x="17432" y="3208" width="128" height="128"/>
+  <object id="484" name="Chair" gid="401" x="17908" y="3224" width="128" height="128"/>
+  <object id="485" name="Chair" gid="401" x="17908" y="3552" width="128" height="128"/>
+  <object id="486" name="Chair" gid="401" x="17420" y="3556" width="128" height="128"/>
+  <object id="487" name="Chair" gid="401" x="17020" y="3552" width="128" height="128"/>
+  <object id="488" name="Chair" gid="401" x="16608" y="3548" width="128" height="128"/>
+  <object id="489" name="Chair" gid="401" x="16280" y="3556" width="128" height="128"/>
+  <object id="490" name="Chair" gid="401" x="15900" y="3568" width="128" height="128"/>
+  <object id="491" name="Chair" gid="401" x="20136" y="4760" width="128" height="128"/>
+  <object id="492" name="Chair" gid="401" x="19860" y="5156" width="128" height="128"/>
+  <object id="493" name="Chair" gid="401" x="20752" y="5548" width="128" height="128"/>
+  <object id="494" name="Chair" gid="401" x="20760" y="4056" width="128" height="128"/>
+  <object id="495" name="Chair" gid="401" x="19220" y="856" width="128" height="128"/>
+  <object id="496" name="Chair" gid="401" x="19536" y="856" width="128" height="128"/>
+  <object id="497" name="Chair" gid="401" x="19864" y="856" width="128" height="128"/>
+  <object id="498" name="Chair" gid="401" x="20256" y="860" width="128" height="128"/>
+  <object id="499" name="Chair" gid="401" x="20604" y="860" width="128" height="128"/>
+  <object id="500" name="Chair" gid="401" x="20968" y="864" width="128" height="128"/>
+  <object id="501" name="Chair" gid="401" x="21308" y="868" width="128" height="128"/>
+  <object id="502" name="Chair" gid="401" x="17840" y="7640" width="128" height="128"/>
+  <object id="504" name="Chair" gid="405" x="8576" y="3208" width="128" height="128"/>
+  <object id="505" name="Chair" gid="405" x="12424" y="5920" width="128" height="128"/>
+  <object id="506" name="Chair" gid="405" x="18208" y="2584" width="128" height="128"/>
+  <object id="507" name="Chair" gid="406" x="16464" y="2584" width="128" height="128"/>
+  <object id="508" name="Chair" gid="406" x="12872" y="5920" width="128" height="128"/>
+  <object id="509" name="Chair" gid="406" x="7400" y="3224" width="128" height="128"/>
+  <object id="510" name="Chair" gid="441" x="4656" y="9800" width="128" height="128"/>
+  <object id="511" name="Chair" gid="441" x="552" y="10800" width="128" height="128"/>
+  <object id="512" name="Chair" gid="441" x="1032" y="8424" width="128" height="128"/>
+  <object id="513" name="Chair" gid="441" x="2400" y="6352" width="128" height="128"/>
+  <object id="514" name="Chair" gid="441" x="2720" y="5288" width="128" height="128"/>
+  <object id="515" name="Chair" gid="441" x="4760" y="6184" width="128" height="128"/>
+  <object id="516" name="Chair" gid="441" x="5208" y="4648" width="128" height="128"/>
+  <object id="517" name="Chair" gid="441" x="6792" y="4088" width="128" height="128"/>
+  <object id="518" name="Chair" gid="441" x="7392" y="5592" width="128" height="128"/>
+  <object id="519" name="Chair" gid="441" x="8624" y="5592" width="128" height="128"/>
+  <object id="520" name="Chair" gid="441" x="8368" y="1000" width="128" height="128"/>
+  <object id="521" name="Chair" gid="441" x="6696" y="1704" width="128" height="128"/>
+  <object id="522" name="Chair" gid="441" x="5720" y="6208" width="128" height="128"/>
+  <object id="523" name="Chair" gid="441" x="6064" y="6232" width="128" height="128"/>
+  <object id="524" name="Chair" gid="441" x="2744" y="8288" width="128" height="128"/>
+  <object id="525" name="Chair" gid="441" x="2360" y="8288" width="128" height="128"/>
+  <object id="527" name="Chair" gid="441" x="8096" y="11200" width="128" height="128"/>
+  <object id="528" name="Chair" gid="441" x="9296" y="11208" width="128" height="128"/>
+  <object id="529" name="Chair" gid="441" x="11056" y="8864" width="128" height="128"/>
+  <object id="530" name="Chair" gid="441" x="15824" y="11704" width="128" height="128"/>
+  <object id="531" name="Chair" gid="441" x="17344" y="10008" width="128" height="128"/>
+  <object id="532" name="Chair" gid="441" x="17360" y="9640" width="128" height="128"/>
+  <object id="534" name="Chair" gid="441" x="18616" y="11064" width="128" height="128"/>
+  <object id="535" name="Chair" gid="441" x="15824" y="8488" width="128" height="128"/>
+  <object id="536" name="Chair" gid="441" x="15832" y="4752" width="128" height="128"/>
+  <object id="537" name="Chair" gid="441" x="16608" y="4784" width="128" height="128"/>
+  <object id="538" name="Chair" gid="441" x="17384" y="4792" width="128" height="128"/>
+  <object id="539" name="Chair" gid="441" x="18856" y="3888" width="128" height="128"/>
+  <object id="540" name="Chair" gid="441" x="18312" y="3888" width="128" height="128"/>
+  <object id="541" name="Chair" gid="441" x="20568" y="5304" width="128" height="128"/>
+  <object id="542" name="Chair" gid="441" x="20896" y="5312" width="128" height="128"/>
+  <object id="543" name="Chair" gid="441" x="21032" y="4528" width="128" height="128"/>
+  <object id="544" name="Chair" gid="441" x="19432" y="1968" width="128" height="128"/>
+  <object id="545" name="Chair" gid="441" x="21432" y="1960" width="128" height="128"/>
+  <object id="546" name="Chair" gid="441" x="13248" y="11056" width="128" height="128"/>
+  <object id="547" name="Chair" gid="441" x="4792" y="11704" width="128" height="128"/>
+  <object id="548" name="Chair" gid="441" x="14280" y="5984" width="128" height="128"/>
+  <object id="549" name="Chair" gid="441" x="14272" y="7544" width="128" height="128"/>
+  <object id="550" name="Chair" gid="441" x="10944" y="7712" width="128" height="128"/>
+  <object id="551" name="Chair" gid="441" x="10944" y="6776" width="128" height="128"/>
+  <object id="552" name="Chair" gid="443" x="11968" y="7912" width="128" height="128"/>
+  <object id="553" name="Chair" gid="443" x="11966" y="8240" width="128" height="128"/>
+  <object id="554" name="Chair" gid="443" x="12978" y="7882" width="128" height="128"/>
+  <object id="555" name="Chair" gid="443" x="12994" y="8236" width="128" height="128"/>
+  <object id="557" name="Chair" gid="443" x="4892" y="9292" width="128" height="128"/>
+  <object id="558" name="Chair" gid="443" x="752" y="10788" width="128" height="128"/>
+  <object id="559" name="Chair" gid="443" x="380" y="10788" width="128" height="128"/>
+  <object id="560" name="Chair" gid="443" x="1988" y="8616" width="128" height="128"/>
+  <object id="561" name="Chair" gid="443" x="2504" y="4896" width="128" height="128"/>
+  <object id="562" name="Chair" gid="443" x="4024" y="5148" width="128" height="128"/>
+  <object id="563" name="Chair" gid="443" x="4024" y="4900" width="128" height="128"/>
+  <object id="564" name="Chair" gid="443" x="5488" y="5112" width="128" height="128"/>
+  <object id="565" name="Chair" gid="443" x="5496" y="4820" width="128" height="128"/>
+  <object id="566" name="Chair" gid="443" x="7664" y="4396" width="128" height="128"/>
+  <object id="567" name="Chair" gid="443" x="7664" y="4048" width="128" height="128"/>
+  <object id="568" name="Chair" gid="443" x="7652" y="3692" width="128" height="128"/>
+  <object id="569" name="Chair" gid="443" x="8012" y="3704" width="128" height="128"/>
+  <object id="570" name="Chair" gid="443" x="8000" y="4068" width="128" height="128"/>
+  <object id="571" name="Chair" gid="443" x="7988" y="4408" width="128" height="128"/>
+  <object id="572" name="Chair" gid="443" x="8300" y="4428" width="128" height="128"/>
+  <object id="573" name="Chair" gid="443" x="8300" y="4064" width="128" height="128"/>
+  <object id="574" name="Chair" gid="443" x="8312" y="3700" width="128" height="128"/>
+  <object id="575" name="Chair" gid="443" x="6700" y="2992" width="128" height="128"/>
+  <object id="576" name="Chair" gid="443" x="6708" y="2636" width="128" height="128"/>
+  <object id="577" name="Chair" gid="443" x="11952" y="6556" width="128" height="128"/>
+  <object id="578" name="Chair" gid="443" x="14268" y="7108" width="128" height="128"/>
+  <object id="579" name="Chair" gid="443" x="14272" y="6700" width="128" height="128"/>
+  <object id="580" name="Chair" gid="443" x="14280" y="6312" width="128" height="128"/>
+  <object id="581" name="Chair" gid="443" x="15088" y="7980" width="128" height="128"/>
+  <object id="582" name="Chair" gid="443" x="16544" y="6056" width="128" height="128"/>
+  <object id="583" name="Chair" gid="443" x="16076" y="3396" width="128" height="128"/>
+  <object id="584" name="Chair" gid="443" x="16428" y="3412" width="128" height="128"/>
+  <object id="585" name="Chair" gid="443" x="16812" y="3392" width="128" height="128"/>
+  <object id="586" name="Chair" gid="443" x="17228" y="3380" width="128" height="128"/>
+  <object id="587" name="Chair" gid="443" x="19148" y="1212" width="128" height="128"/>
+  <object id="588" name="Chair" gid="443" x="19784" y="1212" width="128" height="128"/>
+  <object id="589" name="Chair" gid="443" x="20300" y="1220" width="128" height="128"/>
+  <object id="590" name="Chair" gid="443" x="20804" y="1212" width="128" height="128"/>
+ </objectgroup>
+ <objectgroup name="RoomBoundaries">
+  <object id="115" x="8072" y="8836" width="488" height="912">
+   <properties>
+    <property name="Room" type="int" value="300"/>
+   </properties>
+  </object>
+  <object id="116" x="5152" y="9752" width="5296" height="448">
+   <properties>
+    <property name="Room" type="int" value="300"/>
+   </properties>
+  </object>
+  <object id="117" x="4392" y="9872" width="736" height="328">
+   <properties>
+    <property name="Room" type="int" value="300"/>
+   </properties>
+  </object>
+  <object id="118" x="5000" y="10208" width="352" height="1416">
+   <properties>
+    <property name="Room" type="int" value="300"/>
+   </properties>
+  </object>
+  <object id="119" x="7696" y="10232" width="448" height="1008">
+   <properties>
+    <property name="Room" type="int" value="300"/>
+   </properties>
+  </object>
+  <object id="120" x="9232" y="10224" width="472" height="1008">
+   <properties>
+    <property name="Room" type="int" value="300"/>
+   </properties>
+  </object>
+  <object id="121" x="8160" y="10784" width="1048" height="448">
+   <properties>
+    <property name="Room" type="int" value="300"/>
+   </properties>
+  </object>
+  <object id="122" x="8240" y="10280" width="928" height="424">
+   <properties>
+    <property name="Room" type="int" value="301"/>
+   </properties>
+  </object>
+  <object id="135" x="1832" y="10928" width="1432" height="1184">
+   <properties>
+    <property name="Room" type="int" value="302"/>
+   </properties>
+  </object>
+  <object id="138" x="4030.3" y="9018.18" width="1039.39" height="778.788">
+   <properties>
+    <property name="Room" type="int" value="304"/>
+   </properties>
+  </object>
+  <object id="139" x="3257.58" y="9660.61" width="1039.39" height="518.182">
+   <properties>
+    <property name="Room" type="int" value="304"/>
+   </properties>
+  </object>
+  <object id="157" x="3509.09" y="8378.79" width="266.667" height="518.182">
+   <properties>
+    <property name="Room" type="int" value="305"/>
+   </properties>
+  </object>
+  <object id="158" x="3781.82" y="8630.3" width="636.364" height="266.667">
+   <properties>
+    <property name="Room" type="int" value="305"/>
+   </properties>
+  </object>
+  <object id="159" x="190.909" y="9272.73" width="893.939" height="1539.39">
+   <properties>
+    <property name="Room" type="int" value="307"/>
+   </properties>
+  </object>
+  <object id="162" x="1724.24" y="7736.36" width="1669.7" height="896.97">
+   <properties>
+    <property name="Room" type="int" value="309"/>
+   </properties>
+  </object>
+  <object id="168" x="2888" y="6336" width="1916" height="252">
+   <properties>
+    <property name="Room" type="int" value="310"/>
+   </properties>
+  </object>
+  <object id="169" x="2368" y="3248" width="520" height="4424">
+   <properties>
+    <property name="Room" type="int" value="310"/>
+   </properties>
+  </object>
+  <object id="170" x="2904" y="3248" width="240" height="528">
+   <properties>
+    <property name="Room" type="int" value="310"/>
+   </properties>
+  </object>
+  <object id="171" x="3336" y="11128" width="1664" height="640">
+   <properties>
+    <property name="Room" type="int" value="300"/>
+   </properties>
+  </object>
+  <object id="172" x="2696" y="10240" width="1000" height="624">
+   <properties>
+    <property name="Room" type="int" value="303"/>
+   </properties>
+  </object>
+  <object id="173" x="1936" y="8960" width="2032" height="648">
+   <properties>
+    <property name="Room" type="int" value="306"/>
+   </properties>
+  </object>
+  <object id="174" x="2568" y="8704" width="368" height="240">
+   <properties>
+    <property name="Room" type="int" value="306"/>
+   </properties>
+  </object>
+  <object id="175" x="1160" y="9616" width="1392" height="1248">
+   <properties>
+    <property name="Room" type="int" value="306"/>
+   </properties>
+  </object>
+  <object id="176" x="248" y="7808" width="1416" height="1400">
+   <properties>
+    <property name="Room" type="int" value="308"/>
+   </properties>
+  </object>
+  <object id="177" x="8096" y="632" width="472" height="1400">
+   <properties>
+    <property name="Room" type="int" value="311"/>
+   </properties>
+  </object>
+  <object id="178" x="5024" y="640" width="3048" height="472">
+   <properties>
+    <property name="Room" type="int" value="311"/>
+   </properties>
+  </object>
+  <object id="179" x="5024" y="1120" width="552" height="2640">
+   <properties>
+    <property name="Room" type="int" value="311"/>
+   </properties>
+  </object>
+  <object id="180" x="2944" y="1152" width="2048" height="760">
+   <properties>
+    <property name="Room" type="int" value="311"/>
+   </properties>
+  </object>
+  <object id="181" x="3248" y="3240" width="1752" height="528">
+   <properties>
+    <property name="Room" type="int" value="311"/>
+   </properties>
+  </object>
+  <object id="182" x="5632" y="1152" width="2408" height="5112">
+   <properties>
+    <property name="Room" type="int" value="314"/>
+   </properties>
+  </object>
+  <object id="183" x="8064" y="3104" width="736" height="3144">
+   <properties>
+    <property name="Room" type="int" value="314"/>
+   </properties>
+  </object>
+  <object id="184" x="4288" y="3832" width="1296" height="2432">
+   <properties>
+    <property name="Room" type="int" value="312"/>
+   </properties>
+  </object>
+  <object id="185" x="3728" y="4376" width="528" height="1880">
+   <properties>
+    <property name="Room" type="int" value="312"/>
+   </properties>
+  </object>
+  <object id="186" x="3720" y="3848" width="504" height="488">
+   <properties>
+    <property name="Room" type="int" value="313"/>
+   </properties>
+  </object>
+  <object id="187" x="7344" y="6312" width="2360" height="320">
+   <properties>
+    <property name="Room" type="int" value="315"/>
+   </properties>
+  </object>
+  <object id="188" x="9376" y="5664" width="328" height="600">
+   <properties>
+    <property name="Room" type="int" value="315"/>
+   </properties>
+  </object>
+  <object id="189" x="9720" y="5664" width="2048" height="328">
+   <properties>
+    <property name="Room" type="int" value="315"/>
+   </properties>
+  </object>
+  <object id="190" x="9744" y="6296" width="488" height="464">
+   <properties>
+    <property name="Room" type="int" value="320"/>
+   </properties>
+  </object>
+  <object id="191" x="10904" y="6176" width="464" height="2240">
+   <properties>
+    <property name="Room" type="int" value="316"/>
+   </properties>
+  </object>
+  <object id="192" x="11384" y="6184" width="888" height="464">
+   <properties>
+    <property name="Room" type="int" value="316"/>
+   </properties>
+  </object>
+  <object id="193" x="11808" y="5264" width="464" height="880">
+   <properties>
+    <property name="Room" type="int" value="316"/>
+   </properties>
+  </object>
+  <object id="194" x="12296" y="5272" width="888" height="472">
+   <properties>
+    <property name="Room" type="int" value="316"/>
+   </properties>
+  </object>
+  <object id="195" x="13184" y="5000" width="352" height="2144">
+   <properties>
+    <property name="Room" type="int" value="316"/>
+   </properties>
+  </object>
+  <object id="196" x="13560" y="5008" width="880" height="432">
+   <properties>
+    <property name="Room" type="int" value="316"/>
+   </properties>
+  </object>
+  <object id="197" x="13568" y="6792" width="432" height="368">
+   <properties>
+    <property name="Room" type="int" value="316"/>
+   </properties>
+  </object>
+  <object id="198" x="13856" y="7176" width="536" height="1096">
+   <properties>
+    <property name="Room" type="int" value="316"/>
+   </properties>
+  </object>
+  <object id="199" x="13976" y="5480" width="408" height="1688">
+   <properties>
+    <property name="Room" type="int" value="316"/>
+   </properties>
+  </object>
+  <object id="200" x="13560" y="5504" width="376" height="1256">
+   <properties>
+    <property name="Room" type="int" value="317"/>
+   </properties>
+  </object>
+  <object id="201" x="12336" y="5800" width="776" height="3480">
+   <properties>
+    <property name="Room" type="int" value="319"/>
+   </properties>
+  </object>
+  <object id="206" x="11408" y="6688" width="912" height="2624">
+   <properties>
+    <property name="Room" type="int" value="319"/>
+   </properties>
+  </object>
+  <object id="207" x="13128" y="7216" width="648" height="2072">
+   <properties>
+    <property name="Room" type="int" value="319"/>
+   </properties>
+  </object>
+  <object id="208" x="10904" y="8464" width="456" height="1280">
+   <properties>
+    <property name="Room" type="int" value="318"/>
+   </properties>
+  </object>
+  <object id="209" x="13856" y="8344" width="600" height="1400">
+   <properties>
+    <property name="Room" type="int" value="318"/>
+   </properties>
+  </object>
+  <object id="210" x="10512" y="9760" width="3936" height="480">
+   <properties>
+    <property name="Room" type="int" value="318"/>
+   </properties>
+  </object>
+  <object id="211" x="12176" y="10272" width="1248" height="984">
+   <properties>
+    <property name="Room" type="int" value="339"/>
+   </properties>
+  </object>
+  <object id="212" x="13448" y="10264" width="360" height="336">
+   <properties>
+    <property name="Room" type="int" value="340"/>
+   </properties>
+  </object>
+  <object id="213" x="13832" y="10264" width="600" height="1512">
+   <properties>
+    <property name="Room" type="int" value="318"/>
+   </properties>
+  </object>
+  <object id="214" x="17184" y="10656" width="584" height="496">
+   <properties>
+    <property name="Room" type="int" value="318"/>
+   </properties>
+  </object>
+  <object id="215" x="14464" y="11168" width="3312" height="592">
+   <properties>
+    <property name="Room" type="int" value="318"/>
+   </properties>
+  </object>
+  <object id="216" x="16688" y="8880" width="1448" height="1680">
+   <properties>
+    <property name="Room" type="int" value="321"/>
+   </properties>
+  </object>
+  <object id="217" x="16264" y="9232" width="368" height="736">
+   <properties>
+    <property name="Room" type="int" value="322"/>
+   </properties>
+  </object>
+  <object id="218" x="18184" y="9120" width="368" height="1368">
+   <properties>
+    <property name="Room" type="int" value="323"/>
+   </properties>
+  </object>
+  <object id="219" x="18560" y="10768" width="2384" height="368">
+   <properties>
+    <property name="Room" type="int" value="324"/>
+   </properties>
+  </object>
+  <object id="220" x="18560" y="8208" width="1904" height="2536">
+   <properties>
+    <property name="Room" type="int" value="324"/>
+   </properties>
+  </object>
+  <object id="221" x="17552" y="7440" width="872" height="712">
+   <properties>
+    <property name="Room" type="int" value="325"/>
+   </properties>
+  </object>
+  <object id="222" x="16656" y="7424" width="864" height="736">
+   <properties>
+    <property name="Room" type="int" value="326"/>
+   </properties>
+  </object>
+  <object id="223" x="15760" y="8200" width="2784" height="368">
+   <properties>
+    <property name="Room" type="int" value="324"/>
+   </properties>
+  </object>
+  <object id="224" x="14856" y="6528" width="864" height="744">
+   <properties>
+    <property name="Room" type="int" value="328"/>
+   </properties>
+  </object>
+  <object id="225" x="14856" y="7296" width="864" height="768">
+   <properties>
+    <property name="Room" type="int" value="327"/>
+   </properties>
+  </object>
+  <object id="226" x="15240" y="5384" width="872" height="720">
+   <properties>
+    <property name="Room" type="int" value="329"/>
+   </properties>
+  </object>
+  <object id="227" x="16264" y="5376" width="880" height="736">
+   <properties>
+    <property name="Room" type="int" value="330"/>
+   </properties>
+  </object>
+  <object id="228" x="15528" y="2448" width="3792" height="1488">
+   <properties>
+    <property name="Room" type="int" value="334"/>
+   </properties>
+  </object>
+  <object id="229" x="15512" y="3936" width="2368" height="896">
+   <properties>
+    <property name="Room" type="int" value="334"/>
+   </properties>
+  </object>
+  <object id="230" x="19080" y="6160" width="360" height="368">
+   <properties>
+    <property name="Room" type="int" value="331"/>
+   </properties>
+  </object>
+  <object id="231" x="20360" y="3864" width="872" height="1760">
+   <properties>
+    <property name="Room" type="int" value="333"/>
+   </properties>
+  </object>
+  <object id="232" x="19464" y="4496" width="872" height="728">
+   <properties>
+    <property name="Room" type="int" value="332"/>
+   </properties>
+  </object>
+  <object id="233" x="15736" y="6504" width="384" height="1672">
+   <properties>
+    <property name="Room" type="int" value="324"/>
+   </properties>
+  </object>
+  <object id="234" x="16912" y="6488" width="368" height="912">
+   <properties>
+    <property name="Room" type="int" value="324"/>
+   </properties>
+  </object>
+  <object id="235" x="14856" y="3848" width="616" height="1528">
+   <properties>
+    <property name="Room" type="int" value="324"/>
+   </properties>
+  </object>
+  <object id="236" x="14856" y="5392" width="360" height="1104">
+   <properties>
+    <property name="Room" type="int" value="324"/>
+   </properties>
+  </object>
+  <object id="237" x="15224" y="6144" width="3824" height="384">
+   <properties>
+    <property name="Room" type="int" value="324"/>
+   </properties>
+  </object>
+  <object id="238" x="18680" y="4096" width="768" height="2032">
+   <properties>
+    <property name="Room" type="int" value="324"/>
+   </properties>
+  </object>
+  <object id="239" x="19344" y="2056" width="1008" height="2416">
+   <properties>
+    <property name="Room" type="int" value="324"/>
+   </properties>
+  </object>
+  <object id="240" x="19072" y="632" width="6008" height="1416">
+   <properties>
+    <property name="Room" type="int" value="335"/>
+   </properties>
+  </object>
+  <object id="241" x="22400" y="10488" width="2688" height="632">
+   <properties>
+    <property name="Room" type="int" value="335"/>
+   </properties>
+  </object>
+  <object id="242" x="24448" y="2048" width="640" height="8416">
+   <properties>
+    <property name="Room" type="int" value="335"/>
+   </properties>
+  </object>
+  <object id="243" x="21504" y="5120" width="1264" height="1776">
+   <properties>
+    <property name="Room" type="int" value="338"/>
+   </properties>
+  </object>
+  <object id="244" x="20976" y="10224" width="1408" height="896">
+   <properties>
+    <property name="Room" type="int" value="336"/>
+   </properties>
+  </object>
+  <object id="245" x="20896" y="6896" width="2512" height="3296">
+   <properties>
+    <property name="Room" type="int" value="337"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>
