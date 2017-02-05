@@ -67,7 +67,8 @@ namespace Assets.AI
                 }
                 if (_controller.IsCharacterWithinAttackRange(_player,_attackRange) && _controller.CanAttack())
                 {
-                    Vector2 direction = (_player.transform.position - transform.position).normalized;
+                    Vector2 direction = (_player.transform.position - transform.position);
+                    direction.Normalize();
                     _controller.Attack(_playerController, _cooldown, _damage, direction, _shakeDuration, _shakeIntensity);
                 }
             }

@@ -234,7 +234,7 @@ MonoBehaviour:
   _shakeDuration: 0.25
   _shakeIntensity: 1.5
   _activeness: 1
-  _awareRange: 4
+  _awareRange: 7
 --- !u!114 &114568985504184884
 MonoBehaviour:
   m_ObjectHideFlags: 1
