@@ -35,7 +35,7 @@ namespace Assets.AI
                 if ((_lamp.transform.position - transform.position).sqrMagnitude > (_lampRange * _lampRange))
                 {
                     _playerEntered = false;
-                    _controller.ReturnToPatrol();
+                    //_controller.ReturnToPatrol();
                 }
             }   
         }
@@ -43,19 +43,24 @@ namespace Assets.AI
         void OnTriggerStay2D(Collider2D other)
         {
             GameObject actor = other.gameObject;
-            actor = actor.transform.parent.gameObject;
-            if(actor.tag == "Player")
+            if (actor.CompareTag("Player"))
             {
-                _playerEntered = true;
-                if (_playerController == null)
+                actor = actor.transform.parent.gameObject;
+                //Rigidbody2D prb = actor.GetComponent<Rigidbody2D>();
+                //Vector3 vel = prb.velocity.normalized;
+                if (actor.tag == "Player")
                 {
-                    _playerController = actor.GetComponent<PlayerController>();
+                    _playerEntered = true;
+                    if (_playerController == null)
+                    {
+                        _playerController = actor.GetComponent<PlayerController>();
+                    }
+                    if (_lampAI == null)
+                    {
+                        _lampAI = _lamp.GetComponent<LampAI>();
+                    }
+                    _lampAI.Attack();
                 }
-                if(_lampAI == null)
-                {
-                    _lampAI = _lamp.GetComponent<LampAI>();
-                }
-                _lampAI.Attack(_playerController);
             }
         }
     }
