@@ -51,6 +51,7 @@ namespace Assets.AI
                 _ariveAtAlert = false;
                 _searchTime = _searchTimeMax;
                 Vector3 playerPosition = _player.transform.position;
+                playerPosition.z = 0;
                 _alertPosition = playerPosition;
                 if(_controller.MoveTowardsCharacter(_player, _attackRange, _speed))
                 {

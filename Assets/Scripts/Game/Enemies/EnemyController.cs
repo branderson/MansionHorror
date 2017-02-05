@@ -69,7 +69,7 @@ namespace Assets.Game
         /// <returns>Reached target</returns>
         public virtual bool MoveTowardsPosition(Vector2 Position, float Speed)
         {
-            Vector3 NewPosition = new Vector3(Position.x,Position.y,0f);
+            Vector3 NewPosition = new Vector3(Position.x,Position.y,transform.position.z);
             if (transform.position == NewPosition)
             {
                 return true;
@@ -262,7 +262,9 @@ namespace Assets.Game
         /// <returns></returns>
         public virtual bool IsCharacterWithinAttackRange(GameObject Player, float AttackRange, float Offset)
         {
-            return (Player.transform.position - transform.position).sqrMagnitude <= ((AttackRange - Offset) * (AttackRange - Offset));
+            Vector2 playerPos = Player.transform.position;
+            Vector2 enemyPos = transform.position;
+            return (playerPos - enemyPos).sqrMagnitude <= ((AttackRange - Offset) * (AttackRange - Offset));
         }
 
         /// <summary>
