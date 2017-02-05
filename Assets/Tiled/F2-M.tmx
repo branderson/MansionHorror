@@ -538,514 +538,606 @@
    </properties>
   </tile>
  </tileset>
+ <tileset firstgid="401" name="Object_Tileset" tilewidth="128" tileheight="128" tilecount="400" columns="20">
+  <image source="Object_Tileset.png" width="2560" height="2560"/>
+ </tileset>
  <layer name="RoomLayout" width="200" height="100" offsetx="-640" offsety="-408">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
  <objectgroup name="RoomBoundaries">
-  <object id="4" name="Room" x="1408" y="8712" width="864" height="856">
+  <object id="4" x="1408" y="8712" width="864" height="856">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="1"/>
    </properties>
   </object>
-  <object id="7" name="Room" x="520" y="9608" width="1360" height="296">
+  <object id="7" x="520" y="9608" width="1360" height="296">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="2"/>
    </properties>
   </object>
-  <object id="8" name="Room" x="520" y="9488" width="592" height="1712">
+  <object id="8" x="520" y="9488" width="592" height="1712">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="2"/>
    </properties>
   </object>
-  <object id="9" name="Room" x="592" y="10912" width="1816" height="320">
+  <object id="9" x="592" y="10856" width="1816" height="376">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="2"/>
    </properties>
   </object>
-  <object id="11" name="Room" x="1088" y="9472" width="296" height="256">
+  <object id="11" x="1088" y="9472" width="296" height="256">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="2"/>
    </properties>
   </object>
-  <object id="12" name="Room" x="136" y="8624" width="392" height="1888">
+  <object id="12" x="136" y="8624" width="392" height="1888">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="0"/>
    </properties>
   </object>
-  <object id="14" name="Room" x="168" y="6752" width="664" height="2608">
+  <object id="14" x="532" y="8184" width="664" height="1236">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="0"/>
    </properties>
   </object>
-  <object id="15" name="Room" x="528" y="9088" width="840" height="304">
+  <object id="15" x="528" y="9088" width="840" height="304">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="0"/>
    </properties>
   </object>
-  <object id="16" name="Room" x="840" y="6816" width="760" height="784">
+  <object id="16" x="840" y="6816" width="760" height="784">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="3"/>
    </properties>
   </object>
-  <object id="17" name="Room" x="776" y="7416" width="344" height="976">
+  <object id="17" x="776" y="7280" width="344" height="1112">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="0"/>
    </properties>
   </object>
-  <object id="18" name="Room" x="640" y="8272" width="360" height="288">
+  <object id="19" x="1176" y="7664" width="960" height="984">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="0"/>
    </properties>
   </object>
-  <object id="19" name="Room" x="1176" y="7664" width="960" height="984">
+  <object id="20" x="2008" y="7936" width="280" height="672">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="0"/>
    </properties>
   </object>
-  <object id="20" name="Room" x="2008" y="7936" width="280" height="672">
+  <object id="21" x="904" y="8568" width="456" height="440">
    <properties>
-    <property name="Room" type="int" value="0"/>
-   </properties>
-  </object>
-  <object id="21" name="Room" x="904" y="8568" width="456" height="440">
-   <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="5"/>
    </properties>
   </object>
-  <object id="22" name="Room" x="1032" y="8408" width="184" height="264">
+  <object id="22" x="1032" y="8408" width="184" height="264">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="5"/>
    </properties>
   </object>
-  <object id="23" name="Room" x="1640" y="7304" width="2536" height="312">
+  <object id="23" x="1640" y="7304" width="2536" height="312">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="3"/>
    </properties>
   </object>
-  <object id="24" name="Room" x="2488" y="6952" width="1688" height="656">
+  <object id="24" x="2488" y="6952" width="1688" height="656">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="3"/>
    </properties>
   </object>
-  <object id="25" name="Room" x="2192" y="7312" width="624" height="560">
+  <object id="25" x="2192" y="7312" width="624" height="560">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="3"/>
    </properties>
   </object>
-  <object id="26" name="Room" x="2312" y="7600" width="488" height="1016">
+  <object id="26" x="2312" y="7600" width="488" height="1016">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="3"/>
    </properties>
   </object>
-  <object id="27" name="Room" x="1160" y="9960" width="2232" height="816">
+  <object id="27" x="1160" y="9960" width="2232" height="864">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="3"/>
    </properties>
   </object>
-  <object id="28" name="Room" x="2488" y="10824" width="1288" height="352">
+  <object id="28" x="2448" y="10824" width="1328" height="400">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="3"/>
    </properties>
   </object>
-  <object id="29" name="Room" x="3472" y="10000" width="312" height="768">
+  <object id="29" x="3472" y="9980" width="348" height="812">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="4"/>
    </properties>
   </object>
-  <object id="30" name="Room" x="2328" y="8712" width="1432" height="1144">
+  <object id="30" x="2328" y="8712" width="1480" height="1224">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="3"/>
    </properties>
   </object>
-  <object id="31" name="Room" x="1912" y="9592" width="1440" height="784">
+  <object id="31" x="1912" y="9592" width="1440" height="784">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="3"/>
    </properties>
   </object>
-  <object id="32" name="Room" x="2832" y="7656" width="968" height="1112">
+  <object id="32" x="2832" y="7656" width="968" height="1112">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="3"/>
    </properties>
   </object>
-  <object id="33" name="Room" x="3816" y="7680" width="1144" height="944">
+  <object id="33" x="3816" y="7680" width="1144" height="944">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="3"/>
    </properties>
   </object>
-  <object id="35" name="Room" x="2312" y="4456" width="1976" height="2400">
+  <object id="35" x="2312" y="4456" width="1976" height="2400">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="13"/>
    </properties>
   </object>
-  <object id="36" name="Room" x="48" y="1952" width="2216" height="3064">
+  <object id="36" x="48" y="1952" width="2216" height="3064">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="16"/>
    </properties>
   </object>
-  <object id="37" name="Room" x="2320" y="1952" width="936" height="2432">
+  <object id="37" x="2320" y="1952" width="936" height="2432">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="14"/>
    </properties>
   </object>
-  <object id="38" name="Room" x="3016" y="3584" width="1280" height="776">
+  <object id="38" x="3016" y="3584" width="1280" height="776">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="14"/>
    </properties>
   </object>
-  <object id="39" name="Room" x="3120" y="1928" width="1200" height="496">
+  <object id="39" x="3120" y="1928" width="1200" height="496">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="14"/>
    </properties>
   </object>
-  <object id="40" name="Room" x="3304" y="2520" width="1016" height="1032">
+  <object id="40" x="3304" y="2520" width="1016" height="1032">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="15"/>
    </properties>
   </object>
-  <object id="41" name="Room" x="2720" y="616" width="1224" height="1264">
+  <object id="41" x="2720" y="616" width="1224" height="1264">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="48"/>
    </properties>
   </object>
-  <object id="42" name="Room" x="4320" y="1160" width="904" height="3248">
+  <object id="42" x="4320" y="1160" width="904" height="3248">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="48"/>
    </properties>
   </object>
-  <object id="43" name="Room" x="3648" y="1048" width="992" height="832">
+  <object id="43" x="3648" y="1048" width="992" height="832">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="48"/>
    </properties>
   </object>
-  <object id="44" name="Room" x="7176" y="1256" width="1016" height="1112">
+  <object id="44" x="7176" y="1256" width="1016" height="1112">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="0"/>
    </properties>
   </object>
-  <object id="45" name="Room" x="7296" y="2296" width="352" height="1488">
+  <object id="45" x="7296" y="2296" width="352" height="1488">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="17"/>
    </properties>
   </object>
-  <object id="46" name="Room" x="7560" y="3448" width="1640" height="1384">
+  <object id="46" x="7560" y="3448" width="1640" height="1384">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="17"/>
    </properties>
   </object>
-  <object id="47" name="Room" x="9248" y="3488" width="1200" height="944">
+  <object id="47" x="9248" y="3488" width="1200" height="944">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="18"/>
    </properties>
   </object>
-  <object id="48" name="Room" x="7680" y="2408" width="2792" height="992">
+  <object id="48" x="7680" y="2408" width="2792" height="992">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="20"/>
    </properties>
   </object>
-  <object id="49" name="Room" x="8232" y="1168" width="2240" height="1176">
+  <object id="50" x="5784" y="3856" width="1736" height="1824">
    <properties>
-    <property name="Room" type="int" value="19"/>
-   </properties>
-  </object>
-  <object id="50" name="Room" x="5784" y="3856" width="1736" height="1824">
-   <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="12"/>
    </properties>
   </object>
-  <object id="51" name="Room" x="7440" y="4848" width="1760" height="816">
+  <object id="51" x="7440" y="4848" width="1760" height="816">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="12"/>
    </properties>
   </object>
-  <object id="52" name="Room" x="10520" y="1560" width="2248" height="1448">
+  <object id="52" x="10520" y="1560" width="2248" height="1448">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="21"/>
    </properties>
   </object>
-  <object id="53" name="Room" x="12696" y="1552" width="480" height="1272">
+  <object id="53" x="12696" y="1552" width="480" height="1272">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="21"/>
    </properties>
   </object>
-  <object id="54" name="Room" x="13208" y="1544" width="1328" height="1320">
+  <object id="54" x="13208" y="1912" width="1328" height="952">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="22"/>
    </properties>
   </object>
-  <object id="55" name="Room" x="14664" y="880" width="1304" height="1976">
+  <object id="55" x="14612" y="1528" width="1380" height="1328">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="23"/>
    </properties>
   </object>
-  <object id="56" name="Room" x="16016" y="1160" width="1368" height="1728">
+  <object id="56" x="16016" y="1904" width="1368" height="984">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="24"/>
    </properties>
   </object>
-  <object id="57" name="Room" x="17392" y="1552" width="1384" height="1296">
+  <object id="57" x="17392" y="1900" width="1384" height="1008">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="25"/>
    </properties>
   </object>
-  <object id="58" name="Room" x="13448" y="2960" width="5336" height="600">
+  <object id="58" x="13456" y="2960" width="5336" height="600">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="26"/>
    </properties>
   </object>
-  <object id="59" name="Room" x="12816" y="2968" width="600" height="560">
+  <object id="59" x="12816" y="2968" width="600" height="560">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="30"/>
    </properties>
   </object>
-  <object id="60" name="Room" x="18168" y="2920" width="608" height="3832">
+  <object id="60" x="18168" y="2920" width="608" height="3832">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="26"/>
    </properties>
   </object>
-  <object id="61" name="Room" x="15648" y="3616" width="2464" height="2824">
+  <object id="61" x="15648" y="3616" width="2464" height="2824">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="27"/>
    </properties>
   </object>
-  <object id="62" name="Room" x="17176" y="6008" width="936" height="712">
+  <object id="62" x="17176" y="6008" width="936" height="712">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="27"/>
    </properties>
   </object>
-  <object id="63" name="Room" x="13472" y="3576" width="2128" height="2856">
+  <object id="63" x="13472" y="3576" width="2128" height="2856">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="28"/>
    </properties>
   </object>
-  <object id="64" name="Room" x="13584" y="7800" width="3552" height="1096">
+  <object id="64" x="13584" y="7800" width="3552" height="1096">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="37"/>
    </properties>
   </object>
-  <object id="65" name="Room" x="15920" y="6504" width="1216" height="2392">
+  <object id="65" x="15920" y="6504" width="1216" height="2392">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="37"/>
    </properties>
   </object>
-  <object id="67" name="Room" x="13216" y="7048" width="1728" height="704">
+  <object id="67" x="13216" y="7048" width="1728" height="704">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="38"/>
    </properties>
   </object>
-  <object id="68" name="Room" x="13216" y="7048" width="344" height="1368">
+  <object id="68" x="13216" y="7048" width="344" height="1368">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="38"/>
    </properties>
   </object>
-  <object id="69" name="Room" x="12656" y="6384" width="504" height="2008">
+  <object id="69" x="12656" y="6384" width="504" height="2008">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="33"/>
    </properties>
   </object>
-  <object id="70" name="Room" x="12680" y="6376" width="616" height="632">
+  <object id="70" x="12680" y="6376" width="616" height="632">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="33"/>
    </properties>
   </object>
-  <object id="71" name="Room" x="9992" y="7928" width="3152" height="432">
+  <object id="71" x="9992" y="7928" width="3152" height="432">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="33"/>
    </properties>
   </object>
-  <object id="72" name="Room" x="10008" y="7928" width="584" height="1240">
+  <object id="72" x="10008" y="7928" width="584" height="1240">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="33"/>
    </properties>
   </object>
-  <object id="73" name="Room" x="10768" y="6664" width="1848" height="1192">
+  <object id="73" x="10768" y="6664" width="1848" height="1192">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="32"/>
    </properties>
   </object>
-  <object id="74" name="Room" x="10264" y="6672" width="488" height="1200">
+  <object id="74" x="10264" y="6672" width="488" height="1200">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="0"/>
    </properties>
   </object>
-  <object id="75" name="Room" x="10392" y="5728" width="440" height="920">
+  <object id="75" x="10392" y="5728" width="440" height="920">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="17"/>
    </properties>
   </object>
-  <object id="76" name="Room" x="10488" y="4488" width="344" height="1240">
+  <object id="76" x="10488" y="4488" width="344" height="1240">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="17"/>
    </properties>
   </object>
-  <object id="79" name="Room" x="9136" y="4472" width="1704" height="320">
+  <object id="79" x="9136" y="4472" width="1704" height="320">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="17"/>
    </properties>
   </object>
-  <object id="80" name="Room" x="8360" y="6656" width="1864" height="1064">
+  <object id="80" x="8360" y="6656" width="1864" height="1064">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="11"/>
    </properties>
   </object>
-  <object id="81" name="Room" x="7456" y="7712" width="1456" height="1056">
+  <object id="81" x="7456" y="7712" width="1456" height="1056">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="11"/>
    </properties>
   </object>
-  <object id="82" name="Room" x="6448" y="5760" width="944" height="3032">
+  <object id="82" x="6448" y="5760" width="944" height="3032">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="10"/>
    </properties>
   </object>
-  <object id="83" name="Room" x="5504" y="5720" width="2744" height="1896">
+  <object id="83" x="5504" y="5720" width="2744" height="1896">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="10"/>
    </properties>
   </object>
-  <object id="84" name="Room" x="4344" y="5760" width="5128" height="784">
+  <object id="84" x="4344" y="5760" width="5128" height="784">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="10"/>
    </properties>
   </object>
-  <object id="85" name="Room" x="3880" y="8688" width="1536" height="2128">
+  <object id="85" x="3880" y="8688" width="1536" height="2128">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="6"/>
    </properties>
   </object>
-  <object id="86" name="Room" x="5464" y="8816" width="3112" height="3064">
+  <object id="86" x="5464" y="8816" width="3112" height="3064">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="8"/>
    </properties>
   </object>
-  <object id="87" name="Room" x="4240" y="10904" width="1168" height="1448">
+  <object id="87" x="4240" y="10904" width="1168" height="1448">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="7"/>
    </properties>
   </object>
-  <object id="88" name="Room" x="8608" y="11400" width="1944" height="968">
+  <object id="88" x="8608" y="11400" width="1944" height="968">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="7"/>
    </properties>
   </object>
-  <object id="89" name="Room" x="5256" y="11864" width="3504" height="360">
+  <object id="89" x="5256" y="11864" width="3504" height="360">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="7"/>
    </properties>
   </object>
-  <object id="90" name="Room" x="8592" y="9224" width="1992" height="2120">
+  <object id="90" x="8592" y="9224" width="1992" height="2120">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="9"/>
    </properties>
   </object>
-  <object id="91" name="Room" x="10656" y="10488" width="2896" height="1880">
+  <object id="91" x="10656" y="10488" width="2896" height="1900">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="35"/>
    </properties>
   </object>
-  <object id="92" name="Room" x="10656" y="8384" width="2856" height="1984">
+  <object id="92" x="10656" y="8384" width="2856" height="1984">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="34"/>
    </properties>
   </object>
-  <object id="93" name="Room" x="13592" y="8968" width="2120" height="1320">
+  <object id="93" x="13592" y="8968" width="2120" height="1320">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="36"/>
    </properties>
   </object>
-  <object id="94" name="Room" x="15752" y="8936" width="1368" height="1328">
+  <object id="94" x="15752" y="8936" width="1368" height="1328">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="39"/>
    </properties>
   </object>
-  <object id="95" name="Room" x="13584" y="10352" width="3520" height="720">
+  <object id="95" x="13584" y="10352" width="3520" height="720">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="40"/>
    </properties>
   </object>
-  <object id="96" name="Room" x="16400" y="10936" width="712" height="1176">
+  <object id="96" x="16400" y="10936" width="712" height="1176">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="40"/>
    </properties>
   </object>
-  <object id="97" name="Room" x="16368" y="11416" width="2416" height="656">
+  <object id="97" x="16368" y="11416" width="2416" height="656">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="40"/>
    </properties>
   </object>
-  <object id="98" name="Room" x="17160" y="6744" width="1624" height="4552">
+  <object id="98" x="17160" y="6744" width="1624" height="4552">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="41"/>
    </properties>
   </object>
-  <object id="99" name="Room" x="18816" y="9344" width="2160" height="848">
+  <object id="99" x="18816" y="9344" width="2160" height="848">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="44"/>
    </properties>
   </object>
-  <object id="100" name="Room" x="19488" y="10272" width="1456" height="1184">
+  <object id="100" x="19488" y="10272" width="1456" height="1184">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="43"/>
    </properties>
   </object>
-  <object id="101" name="Room" x="18824" y="11544" width="1728" height="576">
+  <object id="101" x="18824" y="11544" width="1728" height="576">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="42"/>
    </properties>
   </object>
-  <object id="102" name="Room" x="18824" y="10256" width="616" height="1864">
+  <object id="102" x="18824" y="10256" width="616" height="1864">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="42"/>
    </properties>
   </object>
-  <object id="103" name="Room" x="18840" y="8800" width="2640" height="520">
+  <object id="103" x="18840" y="8800" width="2640" height="520">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="46"/>
    </properties>
   </object>
-  <object id="104" name="Room" x="20960" y="8832" width="536" height="2624">
+  <object id="104" x="20960" y="8832" width="536" height="2624">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="46"/>
    </properties>
   </object>
-  <object id="105" name="Room" x="21528" y="10624" width="832" height="840">
+  <object id="105" x="21528" y="10624" width="832" height="840">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="47"/>
    </properties>
   </object>
-  <object id="106" name="Room" x="18832" y="5016" width="2616" height="2840">
+  <object id="106" x="18832" y="5016" width="2032" height="2840">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="45"/>
    </properties>
   </object>
-  <object id="107" name="Room" x="10888" y="3064" width="608" height="3568">
+  <object id="107" x="10888" y="3064" width="608" height="3568">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="31"/>
    </properties>
   </object>
-  <object id="108" name="Room" x="10888" y="3064" width="1912" height="464">
+  <object id="108" x="10888" y="3064" width="1912" height="464">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="31"/>
    </properties>
   </object>
-  <object id="109" name="Room" x="11520" y="3560" width="1896" height="2736">
+  <object id="109" x="11520" y="3560" width="1896" height="2736">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="29"/>
    </properties>
   </object>
-  <object id="110" name="Room" x="7200" y="1264" width="952" height="1080">
+  <object id="110" x="7200" y="1264" width="952" height="1080">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="17"/>
    </properties>
   </object>
-  <object id="111" name="Room" x="9264" y="4880" width="1160" height="800">
+  <object id="111" x="9264" y="4880" width="1160" height="800">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="49"/>
    </properties>
   </object>
-  <object id="112" name="Room" x="9512" y="5552" width="808" height="1032">
+  <object id="112" x="9512" y="5552" width="808" height="1032">
    <properties>
+    <property name="Name" value="Room"/>
     <property name="Room" type="int" value="49"/>
    </properties>
   </object>
