@@ -7,14 +7,10 @@ public class ShaderTest : MonoBehaviour {
 
     public Material EffectMaterial;
 
-    void Awake()
-    {
-        //EffectMaterial = GetComponent<Material>();
-    }
-
     void OnRenderImage(RenderTexture src, RenderTexture dst)
     {
-        Graphics.Blit(src, dst, EffectMaterial);
+        if (EffectMaterial != null)
+            Graphics.Blit(src, dst, EffectMaterial);
     }
 
 }

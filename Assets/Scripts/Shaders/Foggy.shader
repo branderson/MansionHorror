@@ -4,10 +4,10 @@
 	{
 		_MainTex("Texture", 2D) = "white" {}
 		_FogTex("Fog Texture", 2D) = "white" {}
-		_Motion("", 2D) = "black"{}
+		_Motion("Effect", 2D) = "black"{}
 		_DistTex("Distortion Texture", 2D) = "grey" {}
-		_MotionSpeed("", float) = 0
-		_EffectsLayer2Foreground("", float) = 0
+		_MotionSpeed("Motion Speed", float) = 0
+		_EffectsLayer2Foreground("Blend Foreground", float) = 0
 			//_InvertBlur("Invert", float) = 1
 			//_Position("Blur Position", float3 xyz) 
 			//_DisplaceTex("Displacement Texture", 2D) = "white" {}

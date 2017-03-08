@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SpriteChange
-  m_Shader: {fileID: 4800000, guid: 8b7030e7cdec4b44e868f8b2bec5d02f, type: 3}
+  m_Name: Clydoscope
+  m_Shader: {fileID: 4800000, guid: 5c92ed0050dac764483eb9b4dade9014, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -15,12 +15,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
-    - first:
-        name: _BlurTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - first:
         name: _BumpMap
       second:
@@ -76,9 +70,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
-        name: _SecondTex
+        name: _TransitionTex
       second:
-        m_Texture: {fileID: 2800000, guid: bdc0874d4d71a5647b1adb8eced9540e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1e17bb2d0dc3e154fb92de1016f754c9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -87,7 +81,7 @@ Material:
       second: 1
     - first:
         name: _Cutoff
-      second: 0.5
+      second: 1
     - first:
         name: _DetailNormalMapScale
       second: 1
@@ -95,7 +89,7 @@ Material:
         name: _DstBlend
       second: 0
     - first:
-        name: _EffectsLayer2Foreground
+        name: _Fade
       second: 1
     - first:
         name: _GlossMapScale
@@ -119,9 +113,6 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
-        name: _Shininess
-      second: 0.44
-    - first:
         name: _SmoothnessTextureChannel
       second: 0
     - first:
@@ -131,9 +122,6 @@ Material:
         name: _SrcBlend
       second: 1
     - first:
-        name: _Tween
-      second: 0
-    - first:
         name: _UVSec
       second: 0
     - first:
@@ -142,16 +130,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 0, b: 0.5999999, a: 1}
-    - first:
-        name: _EdgeColor
-      second: {r: 1, g: 0.6, b: 0, a: 1}
-    - first:
-        name: _Emission
-      second: {r: 0, g: 0, b: 0, a: 0}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
-    - first:
-        name: _SpecColor
-      second: {r: 1, g: 1, b: 1, a: 1}

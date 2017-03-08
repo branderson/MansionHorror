@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Displace
-  m_Shader: {fileID: 4800000, guid: 6019611ae04aae0418262956470979d5, type: 3}
+  m_Shader: {fileID: 4800000, guid: dce7c443cb4519345b7e172882630d82, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -15,6 +15,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
+    - first:
+        name: _BlurTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 145fc1588d2ce2a44a99f6e7d7d5be5e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - first:
         name: _BumpMap
       second:
@@ -54,7 +60,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: dbb58a8465f8d7241bed1a9d458c3ebd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -99,7 +105,7 @@ Material:
       second: 1
     - first:
         name: _Magnitude
-      second: 0.013
+      second: 0.063
     - first:
         name: _Metallic
       second: 0
